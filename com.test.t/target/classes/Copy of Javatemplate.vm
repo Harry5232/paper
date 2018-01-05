@@ -1,0 +1,38 @@
+import groovy.sql.Sql
+import spock.lang.Shared
+import spock.lang.*
+import com.test.t.HW4Solution
+
+
+class JavaSpec extends Specification {
+ 
+ #foreach ($method in ${methods})
+ 
+ //${method[3]} points, "${method[1]}" type
+ //${method[5]} case samples 
+ @Unroll
+ def "${method.get(0)}"() {
+    setup:
+        String []s = [#foreach(${s} in ${method[5]})"${s}"#if( $foreach.hasNext ),#end #end];
+    
+        List m = Arrays.asList(s)
+        
+    	HW4Solution t = new HW4Solution();
+
+    	Map rlt = t.histogram(m);
+    
+    expect:
+   		rlt.get(a) == c
+
+    where:
+   		 a || c
+    #foreach(${s2} in ${method[8]})
+    "${s2}" || ${method[6].get(${s2})}
+   	#end
+  		
+    
+  }
+ #end
+ 
+  
+}
