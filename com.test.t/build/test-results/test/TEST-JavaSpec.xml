@@ -1,126 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JavaSpec" tests="13" skipped="0" failures="1" errors="0" timestamp="2017-12-13T02:46:20" hostname="harry" time="0.828">
+<testsuite name="JavaSpec" tests="12" skipped="0" failures="3" errors="0" timestamp="2018-01-08T07:27:33" hostname="harry" time="0.222">
   <properties/>
-  <testcase name="bits2Float[0]" classname="JavaSpec" time="0.035"/>
-  <testcase name="bits2Float[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="bits2Float[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="numberOfZeros[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfZeros[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfZeros[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="dumpAsBinaryString[0]" classname="JavaSpec" time="0.002"/>
-  <testcase name="dumpAsBinaryString[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="dumpAsBinaryString[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="executionError" classname="JavaSpec" time="0.0">
-    <failure message="java.lang.NoClassDefFoundError: spock/lang/PendingFeature" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: spock/lang/PendingFeature
-	at com.athaydes.spockframework.report.util.Utils.isSkipped(Utils.groovy:103)
-	at com.athaydes.spockframework.report.util.Utils$isSkipped$6.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:56)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:194)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:206)
-	at com.athaydes.spockframework.report.util.Utils$_stats_closure1.doCall(Utils.groovy:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:42)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
-	at org.codehaus.groovy.runtime.callsite.BooleanReturningMethodInvoker.invoke(BooleanReturningMethodInvoker.java:51)
-	at org.codehaus.groovy.runtime.callsite.BooleanClosureWrapper.call(BooleanClosureWrapper.java:53)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.count(DefaultGroovyMethods.java:2667)
-	at org.codehaus.groovy.runtime.DefaultGroovyMethods.count(DefaultGroovyMethods.java:2723)
-	at org.codehaus.groovy.runtime.dgm$118.invoke(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:274)
-	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at com.athaydes.spockframework.report.util.Utils.stats(Utils.groovy:61)
-	at com.athaydes.spockframework.report.util.Utils$stats$3.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at groovy.tmp.templates.GStringTemplateScript1$_getTemplate_closure1.doCall(GStringTemplateScript1.groovy:3)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1027)
-	at groovy.lang.Closure.call(Closure.java:414)
-	at groovy.lang.Closure$WritableClosure.writeTo(Closure.java:844)
-	at groovy.lang.Closure$WritableClosure.toString(Closure.java:970)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)
-	at com.athaydes.spockframework.report.template.TemplateReportCreator.reportFor(TemplateReportCreator.groovy:121)
-	at com.athaydes.spockframework.report.template.TemplateReportCreator$reportFor.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
-	at com.athaydes.spockframework.report.template.TemplateReportCreator.createReportFor(TemplateReportCreator.groovy:94)
-	at com.athaydes.spockframework.report.IReportCreator$createReportFor.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at com.athaydes.spockframework.report.SpecInfoListener.afterSpec(SpockReportExtension.groovy:130)
-	at org.spockframework.runtime.MasterRunListener.afterSpec(MasterRunListener.java:58)
-	at org.spockframework.runtime.JUnitSupervisor.afterSpec(JUnitSupervisor.java:192)
-	at org.spockframework.runtime.BaseSpecRunner.runSpec(BaseSpecRunner.java:77)
-	at org.spockframework.runtime.BaseSpecRunner.run(BaseSpecRunner.java:67)
-	at org.spockframework.runtime.Sputnik.run(Sputnik.java:63)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy1.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:146)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:128)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.lang.ClassNotFoundException: spock.lang.PendingFeature
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 98 more
+  <testcase name="bits2Float[0]" classname="JavaSpec" time="0.188">
+    <failure message="Condition not satisfied:&#10;&#10;ob.bits2Float(a,b,c) == d&#10;|  |          | | |  |  |&#10;|  |          1 | 5  |  6.01&#10;|  6.018535E-36 10   false&#10;com.test.t.HW4Solution@1d7b493a&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+ob.bits2Float(a,b,c) == d
+|  |          | | |  |  |
+|  |          1 | 5  |  6.01
+|  6.018535E-36 10   false
+com.test.t.HW4Solution@1d7b493a
+
+	at JavaSpec.bits2Float(JavaSpec.groovy:15)
 </failure>
   </testcase>
+  <testcase name="bits2Float[1]" classname="JavaSpec" time="0.018"/>
+  <testcase name="bits2Float[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfZeros[0]" classname="JavaSpec" time="0.002">
+    <failure message="Condition not satisfied:&#10;&#10;ob.numberOfZeros(a,b) == c&#10;|  |             | |  |  |&#10;|  28            | 40 |  282&#10;|                30   false&#10;com.test.t.HW4Solution@8e482c2&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+ob.numberOfZeros(a,b) == c
+|  |             | |  |  |
+|  28            | 40 |  282
+|                30   false
+com.test.t.HW4Solution@8e482c2
+
+	at JavaSpec.numberOfZeros(JavaSpec.groovy:33)
+</failure>
+  </testcase>
+  <testcase name="numberOfZeros[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfZeros[2]" classname="JavaSpec" time="0.002">
+    <failure message="Condition not satisfied:&#10;&#10;ob.numberOfZeros(a,b) == c&#10;|  |             | |  |  |&#10;|  31            8 50 |  312&#10;|                     false&#10;com.test.t.HW4Solution@39e83c60&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+ob.numberOfZeros(a,b) == c
+|  |             | |  |  |
+|  31            8 50 |  312
+|                     false
+com.test.t.HW4Solution@39e83c60
+
+	at JavaSpec.numberOfZeros(JavaSpec.groovy:33)
+</failure>
+  </testcase>
+  <testcase name="sumOfAllFactors[0]" classname="JavaSpec" time="0.0"/>
+  <testcase name="sumOfAllFactors[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="sumOfAllFactors[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="dumpAsBinaryString[0]" classname="JavaSpec" time="0.0"/>
+  <testcase name="dumpAsBinaryString[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="dumpAsBinaryString[2]" classname="JavaSpec" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
 ]]></system-err>

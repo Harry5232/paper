@@ -129,6 +129,7 @@ public class TemplateGenerator {
 				ClasspathResourceLoader.class.getName());
 
 		ve.init();
+		
 		// 選擇template
 		Template JavaTpt = ve.getTemplate("Javatemplate.vm");
 		VelocityContext ctx = new VelocityContext();
