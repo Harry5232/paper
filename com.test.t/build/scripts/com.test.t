@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/com.test.t-0.0.1-SNAPSHOT.jar:$APP_HOME/lib/velocity-1.7.jar:$APP_HOME/lib/groovy-all-2.4.10.jar:$APP_HOME/lib/h2-1.4.185.jar:$APP_HOME/lib/javax.mail-1.6.0.jar:$APP_HOME/lib/commons-collections-3.2.1.jar:$APP_HOME/lib/commons-lang-2.4.jar:$APP_HOME/lib/activation-1.1.jar
+CLASSPATH=$APP_HOME/lib/com.test.t-0.0.1-SNAPSHOT.jar:$APP_HOME/lib/velocity-1.7.jar:$APP_HOME/lib/spock-core-1.1-groovy-2.4.jar:$APP_HOME/lib/groovy-all-2.4.10.jar:$APP_HOME/lib/h2-1.4.185.jar:$APP_HOME/lib/javax.mail-1.6.0.jar:$APP_HOME/lib/commons-collections-3.2.1.jar:$APP_HOME/lib/commons-lang-2.4.jar:$APP_HOME/lib/activation-1.1.jar:$APP_HOME/lib/junit-4.12.jar:$APP_HOME/lib/hamcrest-core-1.3.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

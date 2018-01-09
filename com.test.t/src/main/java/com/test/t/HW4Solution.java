@@ -29,7 +29,7 @@ public class HW4Solution {
 
 	}
 
-	@Grade(value = 5, type = Type.DIFFICULT)
+	@Grade(value = 2, type = Type.DIFFICULT)
 	@Validate(number = 3, ex = { @Ex(dataInt = { 10, 20 }),
 			@Ex(dataInt = { 45, 60 }), @Ex(dataInt = { 70, 80 }) })
 	public static String dumpAsBinaryString(int k, int t) {
@@ -52,7 +52,7 @@ public class HW4Solution {
 		return rlt;
 	}
 
-	@Grade(value = 5)
+	@Grade(value = 8)
 	@Validate(number = 3, ex = { @Ex(dataInt = { 1, 10, 5 }) })
 	public static float bits2Float(int sign, int exp, int mantissa) {
 
@@ -67,7 +67,7 @@ public class HW4Solution {
 
 	}
 
-	@Grade(value = 5, type = Type.EASY)
+	@Grade(value = 6	, type = Type.EASY)
 	@Validate(number = 3, ex = { @Ex(dataInt = { 30, 40 }),
 			@Ex(dataInt = { 50, 70 }) })
 	public static int numberOfZeros(int n, int t) {

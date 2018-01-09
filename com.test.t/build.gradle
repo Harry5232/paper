@@ -11,8 +11,8 @@ description = """"""
 
 mainClassName = "com.test.t.TemplateGenerator"
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
 
@@ -20,19 +20,23 @@ sourceSets.main.java.srcDirs = ['src']
 
 repositories { maven { url "http://repo.maven.apache.org/maven2" } }
 dependencies {
+	compile files('spock-core-1.1-groovy-2.4.jar')
+	compile files('junit-4.12.jar')
+	
 	compile group: 'org.apache.velocity', name: 'velocity', version:'1.7'
 	compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.10'
 	compile group: 'com.h2database', name: 'h2', version:'1.4.185'
 	compile group: 'com.sun.mail', name: 'javax.mail', version:'1.6.0'
 	
 	
-	testCompile 'junit:junit:4.8.2'
-	testCompile group: 'org.spockframework', name: 'spock-core', version:'1.0-groovy-2.4'
-
+	testCompile 'junit:junit:4.12'
+	testCompile group: 'org.spockframework', name: 'spock-core', version:'1.1-groovy-2.4'
 	testCompile group: 'net.bytebuddy', name: 'byte-buddy', version:'1.6.5'
 	testCompile group: 'org.objenesis', name: 'objenesis', version:'2.5.1'
 	testCompile group: 'org.hamcrest', name: 'hamcrest-core', version:'1.3'
-	testCompile(group: 'com.athaydes', name: 'spock-reports', version:'1.3.1') { exclude(module: '*') }
+	testCompile(group: 'com.athaydes', name: 'spock-reports', version:'1.3.1') { 
+		exclude(module: '*')
+	}
 	testCompile group: 'org.slf4j', name: 'slf4j-api', version:'1.7.13'
 	testCompile group: 'org.slf4j', name: 'slf4j-simple', version:'1.7.13'
 }

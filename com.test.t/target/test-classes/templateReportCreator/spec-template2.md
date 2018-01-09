@@ -50,11 +50,11 @@ Result: **$result**
 * ${block.kind} ${block.text}
 <%
           if ( block.sourceCode ) {
-              out << "\n```\n"
+              // out << "\n```\n"
               block.sourceCode.each { codeLine ->
-                  out << codeLine << '\n'
+                  out << '\n' << '     ' << codeLine << '\n'
               }
-              out << "```\n"
+              // out << "```\n"
           }
         }
         def executedIterations = iterations.findAll { it.dataValues || it.errors }
@@ -69,13 +69,14 @@ Result: **$result**
         }
         def problems = executedIterations.findAll { it.errors }
         if ( problems ) {
-            out << "\nThe following problems occurred:\n\n"
+            // out << "\nThe following problems occurred:\n\n"
             for ( badIteration in problems ) {
                 if ( badIteration.dataValues ) {
-                    out << '* ' << badIteration.dataValues << '\n'
+                    // out << '* ' << badIteration.dataValues << '\n'
                 }
                 for ( error in badIteration.errors ) {
-                    out << '```\n' << error << '\n```\n'
+                    // out << '```\n' << error << '\n```\n'
+                    out << "\n" << error
                 }
             }
         }

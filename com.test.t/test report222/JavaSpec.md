@@ -7,134 +7,108 @@
 * Failures: 3
 * Errors:   0
 * Skipped:  0
-* Total time: 0.243 seconds
+* Total time: 0.296 seconds
 * Total scores: 
 
 
 
 ## Features
 
-### bits2Float [0]
+### sumOfAllFactors [0]
 
 Result: **FAILURE**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.bits2Float(a,b,c) == d
-```
-
-* Where: 
-
- | a | b | c | d |
- |---|---|---|---|
- | 1 | 10 | 5 | 6.01 | (FAIL)
-
-The following problems occurred:
-
-* [1, 10, 5, 6.01]
-```
-Condition not satisfied:
-
-ob.bits2Float(a,b,c) == d
-|  |          | | |  |  |
-|  |          1 | 5  |  6.01
-|  6.018535E-36 10   false
-com.test.t.HW4Solution@1d7b493a
-
-```
-
---------------------------------------------------------------------
-
-### bits2Float [1]
-
-Result: **PASS**
-
-* Given: 
-
-```
-HW4Solution ob = new HW4Solution()
-```
-
-* Expect: 
-
-```
-ob.bits2Float(a,b,c) == d
-```
-
-* Where: 
-
- | a | b | c | d |
- |---|---|---|---|
- | 31 | 49 | 43 | -3.3087394E-24 | (PASS)
-
---------------------------------------------------------------------
-
-### bits2Float [2]
-
-Result: **PASS**
-
-* Given: 
-
-```
-HW4Solution ob = new HW4Solution()
-```
-
-* Expect: 
-
-```
-ob.bits2Float(a,b,c) == d
-```
-
-* Where: 
-
- | a | b | c | d |
- |---|---|---|---|
- | 18 | 36 | 50 | -4.038992E-28 | (PASS)
-
---------------------------------------------------------------------
-
-### numberOfZeros [0]
-
-Result: **FAILURE**
-
-* Given: 
-
-```
-HW4Solution ob = new HW4Solution()
-```
-
-* Expect: 
-
-```
-ob.numberOfZeros(a,b) == c
-```
+     ob.sumOfAllFactors(a,b) == c
 
 * Where: 
 
  | a | b | c |
  |---|---|---|
- | 30 | 40 | 282 | (FAIL)
+ | 50 | apple | 9 | (FAIL)
 
-The following problems occurred:
-
-* [30, 40, 282]
-```
 Condition not satisfied:
 
-ob.numberOfZeros(a,b) == c
-|  |             | |  |  |
-|  28            | 40 |  282
-|                30   false
+ob.sumOfAllFactors(a,b) == c
+|  |               | |  |  |
+|  93              50|  |  9
+|                    |  false
+|                    apple
+com.test.t.HW4Solution@1d7b493a
+
+--------------------------------------------------------------------
+
+### sumOfAllFactors [1]
+
+Result: **PASS**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.sumOfAllFactors(a,b) == c
+
+* Where: 
+
+ | a | b | c |
+ |---|---|---|
+ | 80 | banana | 186 | (PASS)
+
+--------------------------------------------------------------------
+
+### sumOfAllFactors [2]
+
+Result: **FAILURE**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.sumOfAllFactors(a,b) == c
+
+* Where: 
+
+ | a | b | c |
+ |---|---|---|
+ | 39 | apple | 5 | (FAIL)
+
+Condition not satisfied:
+
+ob.sumOfAllFactors(a,b) == c
+|  |               | |  |  |
+|  56              39|  |  5
+|                    |  false
+|                    apple
 com.test.t.HW4Solution@8e482c2
 
-```
+--------------------------------------------------------------------
+
+### numberOfZeros [0]
+
+Result: **PASS**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.numberOfZeros(a,b) == c
+
+* Where: 
+
+ | a | b | c |
+ |---|---|---|
+ | 30 | 40 | 28 | (PASS)
 
 --------------------------------------------------------------------
 
@@ -144,15 +118,11 @@ Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.numberOfZeros(a,b) == c
-```
+     ob.numberOfZeros(a,b) == c
 
 * Where: 
 
@@ -168,107 +138,85 @@ Result: **FAILURE**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.numberOfZeros(a,b) == c
-```
+     ob.numberOfZeros(a,b) == c
 
 * Where: 
 
  | a | b | c |
  |---|---|---|
- | 8 | 50 | 312 | (FAIL)
+ | 39 | 47 | 2 | (FAIL)
 
-The following problems occurred:
-
-* [8, 50, 312]
-```
 Condition not satisfied:
 
 ob.numberOfZeros(a,b) == c
 |  |             | |  |  |
-|  31            8 50 |  312
-|                     false
-com.test.t.HW4Solution@39e83c60
-
-```
+|  28            | 47 |  2
+|                39   false
+com.test.t.HW4Solution@6b4e5c9
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [0]
+### bits2Float [0]
 
 Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.sumOfAllFactors(a,b) == c
-```
+     ob.bits2Float(a,b,c) == d
 
 * Where: 
 
- | a | b | c |
- |---|---|---|
- | 50 | apple | 93 | (PASS)
+ | a | b | c | d |
+ |---|---|---|---|
+ | 1 | 10 | 5 | 6.018535E-36 | (PASS)
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [1]
+### bits2Float [1]
 
 Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.sumOfAllFactors(a,b) == c
-```
+     ob.bits2Float(a,b,c) == d
 
 * Where: 
 
- | a | b | c |
- |---|---|---|
- | 80 | banana | 186 | (PASS)
+ | a | b | c | d |
+ |---|---|---|---|
+ | 41 | 48 | 12 | -1.6543636E-24 | (PASS)
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [2]
+### bits2Float [2]
 
 Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.sumOfAllFactors(a,b) == c
-```
+     ob.bits2Float(a,b,c) == d
 
 * Where: 
 
- | a | b | c |
- |---|---|---|
- | 49 | apple | 57 | (PASS)
+ | a | b | c | d |
+ |---|---|---|---|
+ | 37 | 41 | 21 | -1.292473E-26 | (PASS)
 
 --------------------------------------------------------------------
 
@@ -278,15 +226,11 @@ Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.dumpAsBinaryString(a,b) == c
-```
+     ob.dumpAsBinaryString(a,b) == c
 
 * Where: 
 
@@ -302,15 +246,11 @@ Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.dumpAsBinaryString(a,b) == c
-```
+     ob.dumpAsBinaryString(a,b) == c
 
 * Where: 
 
@@ -326,15 +266,11 @@ Result: **PASS**
 
 * Given: 
 
-```
-HW4Solution ob = new HW4Solution()
-```
+     HW4Solution ob = new HW4Solution()
 
 * Expect: 
 
-```
-ob.dumpAsBinaryString(a,b) == c
-```
+     ob.dumpAsBinaryString(a,b) == c
 
 * Where: 
 
