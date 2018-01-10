@@ -4,56 +4,55 @@ import org.spockframework.runtime.AbstractRunListener
 import org.spockframework.runtime.model.SpecInfo
 import org.spockframework.runtime.model.FeatureInfo
 import org.spockframework.runtime.model.MethodInfo
-import org.spockframework.runtime.model.*
 
 
 class TimingRunListener extends AbstractRunListener {
 
-  def timeSpec = false
-  def specStartTime
-  def featureStartTimes = [:]
+	def timeSpec = false
+	def specStartTime
+	def featureStartTimes = [:]
 
-  TimingRunListener(timeSpec, timedFeatures) {
-    this.timeSpec = timeSpec
-    timedFeatures.each { featureTimes[it] = null }
-  }
+	TimingRunListener(timeSpec, timedFeatures, timedFixtures) {
+		this.timeSpec = timeSpec
+		timedFeatures.each { featureTimes[it] = null }
+	}
 
-  private now() {
-    System.currentTimeMillis()
-  }
+	private now() {
+		System.currentTimeMillis()
+	}
 
-  private start(name) {
-    println "starting $name …"
-  }
+	private start(name) {
+		println "starting $name …"
+	}
 
-  private done(name, started, finished = now()) {
-    println "$name took ${finished - started} milliseconds"
-  }
+	private done(name, started, finished = now()) {
+		println "$name took ${finished - started} milliseconds"
+	}
 
-  void beforeSpec(SpecInfo spec) {
-    if (timeSpec) {
-      specStartTime = now()
-      start("spec '$spec.name'")
-    }
-  }
+	void beforeSpec(SpecInfo spec) {
+		if (timeSpec) {
+			specStartTime = now()
+			start("spec '$spec.name'")
+		}
+	}
 
-  void beforeFeature(FeatureInfo feature) {
-    if (featureStartTimes.containsKey(feature.name)) {
-      featureStartTimes[feature.name] = now()
-      start("feature '$feature.name'")
-    }
-  }
+	void beforeFeature(FeatureInfo feature) {
+		if (featureStartTimes.containsKey(feature.name)) {
+			featureStartTimes[feature.name] = now()
+			start("feature '$feature.name'")
+		}
+	}
 
-  void afterFeature(FeatureInfo feature) {
-    def startedAt = featureStartTimes[feature.name]
-    if (startedAt) {
-      echo("feature '$feature.name'", startedAt)
-    }
-  }
+	void afterFeature(FeatureInfo feature) {
+		def startedAt = featureStartTimes[feature.name]
+		if (startedAt) {
+			echo("feature '$feature.name'", startedAt)
+		}
+	}
 
-  void afterSpec(SpecInfo spec) {
-    if (specStartTime) {
-      echo("spec '$spec.name'", specStartTime)
-    }
-  }
+	void afterSpec(SpecInfo spec) {
+		if (specStartTime) {
+			echo("spec '$spec.name'", specStartTime)
+		}
+	}
 }

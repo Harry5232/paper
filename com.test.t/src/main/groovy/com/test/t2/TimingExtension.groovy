@@ -4,8 +4,6 @@ import org.spockframework.runtime.model.SpecInfo
 import org.spockframework.runtime.model.FeatureInfo
 import org.spockframework.runtime.model.MethodInfo
 
-//import com.test.t2.TimingRunListener
-
 
 class TimingExtension extends AbstractAnnotationDrivenExtension<Time> {
   def timeSpec = false

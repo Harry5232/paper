@@ -1,7 +1,18 @@
 <%
     def stats = utils.stats( data )
- %># Report for ${utils.getSpecClassName( data )}
-
+    def d = new Date();
+    def month = d.getMonth()+1
+    def date = d.getDate()
+ %># Report for ${utils.getSpecClassName( data )}, time is ${month}/${date}.
+<%
+def ff = {num,t ->
+   def s=""
+   for(int i=0;i<num;i++){
+   		 s=s+t
+   	}
+   	return s
+} 
+%>
 ##Summary
 
 * Total Runs: ${stats.totalRuns}
@@ -11,7 +22,6 @@
 * Skipped:  ${stats.skipped}
 * Total time: ${fmt.toTimeDuration(stats.time)}
 * Total scores: 
-
 <%
     def specTitle = utils.specAnnotation( data, spock.lang.Title )?.value()
     if ( specTitle ) {
@@ -59,13 +69,57 @@ Result: **$result**
         }
         def executedIterations = iterations.findAll { it.dataValues || it.errors }
         if ( params && executedIterations ) {
+   
  %>
- | ${params.join( ' | ' )} |
- |${params.collect { ( '-' * ( it.size() + 2 ) ) + '|' }.join()}
+<% //| ${params.join( ' | ' )} |
+ // |${params.collect { ( '-' * ( it.size() + 2 ) ) + '|' }.join()}
+ %>
 <%
             for ( iteration in executedIterations ) {
-%> | ${iteration.dataValues.join( ' | ' )} | ${iteration.errors ? '(FAIL)' : '(PASS)'}
+            	def datanum = iteration.dataValues.size()
+            	def count = 0
+            	
+            	//印出 |a|b|c
+            	out << "|"
+            	for(v in iteration.dataValues){
+            	    def len = ( String.valueOf(v) ).length()
+            	    if(len %2 == 0){
+            	    	len = len +1
+            	    }
+            	    out <<ff((( len+3)/2)," ")<<params[count]<<ff((( len+3)/2)," ")<<"|"
+            	    count ++      	 
+            	}
+            	out<<"\n"
+            	
+            	//中間隔線----
+            	out << "|"
+            	for(v in iteration.dataValues){
+            	    def len = ( String.valueOf(v) ).length()
+            	    if(len %2 == 0){
+            	    	len = len +1
+            	    }
+            	    out <<ff((len+4),"-")<<"|"
+            	        	 
+            	}
+            	out<<"\n"
+            	
+            	//印出 |5|80|93
+            	out << "|"
+            	for(v in iteration.dataValues){
+            	    def len = ( String.valueOf(v) ).length()
+            	    def e = 2
+            	    if(len %2 == 0){
+            	    	e = 3
+            	    }
+
+            	    out <<ff(2," ")<<v<<ff(e," ")<<"|"
+            	        	 
+            	}
+                out<<"\n"  
+
+%><%//   | ${iteration.dataValues.join( ' | ' )} | ${iteration.errors ? '(FAIL)' : '(PASS)'} %>
 <%          }
+
         }
         def problems = executedIterations.findAll { it.errors }
         if ( problems ) {
