@@ -12,9 +12,9 @@ class TimingRunListener extends AbstractRunListener {
 	def specStartTime
 	def featureStartTimes = [:]
 
-	TimingRunListener(timeSpec, timedFeatures, timedFixtures) {
+	TimingRunListener(timeSpec, timedFeatures) {
 		this.timeSpec = timeSpec
-		timedFeatures.each { featureTimes[it] = null }
+		timedFeatures.each { featureStartTimes[it] = null }
 	}
 
 	private now() {

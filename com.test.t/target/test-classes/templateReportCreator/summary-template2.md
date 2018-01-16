@@ -29,7 +29,7 @@ def f = {num ->
 
 
 |   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success | Total    |  Total   |                          
-|          |          |          | failures |  errors  |  rate    | time(ms) |  scores  |
+|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate    | time(ms) |  scores  |
 |----------|----------|----------|----------|----------|----------|----------|----------|
 |<%f(t1)%>${stats.total}|<%f(t2)%>${stats.passed}|<%f(t3)%>${stats.failed}|<%f(t4)%>${stats.fFails}|<%f(t5)%>${stats.fErrors}|<%f(t6)%>${stats.successRate}|<%f(t7)%>${stats.time}|<%f(10)%>|
 
@@ -41,7 +41,7 @@ def f = {num ->
 %>
 
 |   Name   | Features |  Failed  |  Errors  |  Skipped | Success  |   Time   |
-|          |          |          |          |          |   rate   |          |
+|   Spec   |          |          |          |          |   rate   |          |
 |----------|----------|----------|----------|----------|----------|----------|
 <% data.each { name, map ->
       def s = map.stats

@@ -3,7 +3,7 @@
     def d = new Date();
     def month = d.getMonth()+1
     def date = d.getDate()
- %># Report for ${utils.getSpecClassName( data )}, time is ${month}/${date}.
+ %># Report for ${utils.getSpecClassName( data )}, created on ${month}/${date}, by ${System.properties['user.name']}.
 <%
 def ff = {num,t ->
    def s=""
@@ -115,6 +115,14 @@ Result: **$result**
             	    out <<ff(2," ")<<v<<ff(e," ")<<"|"
             	        	 
             	}
+            	
+            	if(iteration.errors){
+            		out <<"(FAIL)"
+            	}
+            	else{
+            		out <<"(PASS)"
+            	}
+      
                 out<<"\n"  
 
 %><%//   | ${iteration.dataValues.join( ' | ' )} | ${iteration.errors ? '(FAIL)' : '(PASS)'} %>
