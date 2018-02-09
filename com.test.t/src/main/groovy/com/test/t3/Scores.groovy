@@ -8,7 +8,7 @@ import org.spockframework.runtime.extension.ExtensionAnnotation
 @ExtensionAnnotation(ScoresExtension)
 
 public @interface Scores {
-	int points() default 5; // points
-	
-	
+	float points() default 5.0; // points
+
+
 }

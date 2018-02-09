@@ -1,11 +1,12 @@
 import spock.lang.*
 import com.test.t.*
-
+import com.test.t3.Scores
 
 class JavaSpec extends Specification {
  #foreach ($method in ${methods}) ${newline}
- //${method.get("score")} points, "${method.get("type")}" type
+ //"${method.get("type")}" type
  //${method.get("testNum")} test cases  
+ @Scores(points=${method.get("score")}f)
  @Unroll
  def "${method.get("methodName")}"() {
     setup:

@@ -6,20 +6,23 @@ import org.spockframework.runtime.model.MethodInfo
 
 
 class ScoresExtension extends AbstractAnnotationDrivenExtension<Scores> {
-  def ScoresSpec = false
-  def ScoresFeatures = []
-  def sumScores = 0
+	def ScoresSpec = false
+	def ScoresFeatures = []
+	def sumScores = 0
 
-  void visitSpecAnnotation(Scores annotation, SpecInfo spec) {
-    ScoresSpec = true
-  }
+	void visitSpecAnnotation(Scores annotation, SpecInfo spec) {
+		ScoresSpec = true
+	}
 
-  void visitFeatureAnnotation(Scores annotation, FeatureInfo feature) {
-	  //sumScores += annotation.points()
-//	  feature.
-  }
+	void visitFeatureAnnotation(Scores annotation, FeatureInfo feature) {
+		
+		
+		
+		}
 
-  void visitSpec(SpecInfo spec) {
-    spec.addListener(new ScoresRunListener(ScoresSpec, ScoresFeatures))
-  }
+	void visitSpec(SpecInfo spec) {
+		//spec.addListener(new ScoresRunListener(ScoresSpec, ScoresFeatures))
+
+
+	}
 }
