@@ -18,6 +18,7 @@ def t4 = ( String.valueOf(stats.fFails) ).length()
 def t5 = ( String.valueOf(stats.fErrors) ).length()
 def t6 = ( String.valueOf(stats.successRate) ).length()
 def t7 = ( String.valueOf(stats.time) ).length()
+
 def f = {num ->
    for(int i=0;i<10-num;i++){
    		out << " "		
@@ -28,9 +29,9 @@ def f = {num ->
 %>
 
 
-|   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success | Total    |  Total   |                          
-|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate    | time(ms) |  scores  |
-|----------|----------|----------|----------|----------|----------|----------|----------|
+|   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success         | Total    |  Total   |                          
+|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate            | time(ms) |  scores  |
+|----------|----------|----------|----------|----------|------------------|----------|----------|
 |<%f(t1)%>${stats.total}|<%f(t2)%>${stats.passed}|<%f(t3)%>${stats.failed}|<%f(t4)%>${stats.fFails}|<%f(t5)%>${stats.fErrors}|<%f(t6)%>${stats.successRate}|<%f(t7)%>${stats.time}|<%f(10)%>|
 
 
@@ -40,9 +41,9 @@ def f = {num ->
 
 %>
 
-|   Name   | Features |  Failed  |  Errors  |  Skipped | Success  |   Time   |
-|   Spec   |          |          |          |          |   rate   |          |
-|----------|----------|----------|----------|----------|----------|----------|
+|   Name   | Features |  Failed  |  Errors  |  Skipped | Success          |   Time   |
+|   Spec   |          |          |          |          |   rate           |   (ms)   |
+|----------|----------|----------|----------|----------|------------------|----------|
 <% data.each { name, map ->
       def s = map.stats
 //用來對齊

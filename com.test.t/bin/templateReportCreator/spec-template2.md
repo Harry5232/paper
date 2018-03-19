@@ -21,7 +21,7 @@ def ff = {num,t ->
 * Errors:   ${stats.errors}
 * Skipped:  ${stats.skipped}
 * Total time: ${fmt.toTimeDuration(stats.time)}
-* Total scores: 
+* Total scores: ${stats.grades}
 <%
     def specTitle = utils.specAnnotation( data, spock.lang.Title )?.value()
     if ( specTitle ) {

@@ -18,6 +18,7 @@ def t4 = ( String.valueOf(stats.fFails) ).length()
 def t5 = ( String.valueOf(stats.fErrors) ).length()
 def t6 = ( String.valueOf(stats.successRate) ).length()
 def t7 = ( String.valueOf(stats.time) ).length()
+
 def f = {num ->
    for(int i=0;i<10-num;i++){
    		out << " "		
@@ -41,7 +42,7 @@ def f = {num ->
 %>
 
 |   Name   | Features |  Failed  |  Errors  |  Skipped | Success  |   Time   |
-|   Spec   |          |          |          |          |   rate   |          |
+|   Spec   |          |          |          |          |   rate   |   (ms)   |
 |----------|----------|----------|----------|----------|----------|----------|
 <% data.each { name, map ->
       def s = map.stats

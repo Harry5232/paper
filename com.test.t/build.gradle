@@ -24,6 +24,10 @@ dependencies {
 	compile files('spock-core-1.1-groovy-2.4.jar')
 	compile files('junit-4.12.jar')
 	
+	compile files('spock-reports-master-1.4.0.jar')
+	compile files('spock-reports-master-1.4.0-javadoc.jar')
+	compile files('spock-reports-master-1.4.0-sources.jar')
+	
 	compile group: 'org.apache.velocity', name: 'velocity', version:'1.7'
 	compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.10'
 	compile group: 'com.h2database', name: 'h2', version:'1.4.185'

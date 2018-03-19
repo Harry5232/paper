@@ -1,4 +1,5 @@
 package com.test.t3
+
 import java.lang.annotation.*
 import org.spockframework.runtime.extension.ExtensionAnnotation
 
@@ -8,7 +9,7 @@ import org.spockframework.runtime.extension.ExtensionAnnotation
 @ExtensionAnnotation(ScoresExtension)
 
 public @interface Scores {
-	float points() default 5.0; // points
+	float points() default 5.0f; // points
 
 
 }
