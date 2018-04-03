@@ -1,1 +1,1 @@
-{"JavaSpec":{"executedFeatures":["bits2Float","dumpAsBinaryString","numberOfZeros","sumOfAllFactors"],"ignoredFeatures":[],"stats":{"failures":2,"errors":0,"skipped":0,"totalRuns":12,"successRate":0.8333333333333334,"time":1603,"grades":11.0}}}
+{"JavaSpec":{"executedFeatures":["bits2Float","dumpAsBinaryString","numberOfZeros","sumOfAllFactors"],"ignoredFeatures":[],"stats":{"failures":0,"errors":0,"skipped":0,"totalRuns":12,"successRate":1.0,"time":1214,"grades":21.0}}}

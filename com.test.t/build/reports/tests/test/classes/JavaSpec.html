@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.236s</div>
+<div class="counter">0.058s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">83%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,59 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="bits2Float[1]"></a>
-<h3 class="failures">bits2Float[1]</h3>
-<span class="code">
-<pre>Condition not satisfied:
-
-ob.bits2Float(a,b,c) == d
-|  |          | | |  |  |
-|  |          35| 1  |  -1.2325953
-|  |            21   false
-|  -1.2325953E-32
-com.test.t.HW4Solution@5d8fbcdf
-
-	at JavaSpec.bits2Float(JavaSpec.groovy:35)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="dumpAsBinaryString[0]"></a>
-<h3 class="failures">dumpAsBinaryString[0]</h3>
-<span class="code">
-<pre>Condition not satisfied:
-
-ob.dumpAsBinaryString(a,b) == c
-|  |                  | |  |  |
-|  |                  | 20 |  00000000_00000000_00000000001010
-|  |                  10   false
-|  |                       3 differences (91% similarity)
-|  |                       00000000_00000000_00000000(_)00(00)1010
-|  |                       00000000_00000000_00000000(-)00(--)1010
-|  00000000_00000000_00000000_00001010
-com.test.t.HW4Solution@1b3bafe7
-
-	at JavaSpec.dumpAsBinaryString(JavaSpec.groovy:16)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -125,37 +82,37 @@ com.test.t.HW4Solution@1b3bafe7
 </thead>
 <tr>
 <td class="success">bits2Float[0]</td>
-<td>0.010s</td>
+<td>0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">bits2Float[1]</td>
-<td>0.003s</td>
-<td class="failures">failed</td>
+<td class="success">bits2Float[1]</td>
+<td>0s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">bits2Float[2]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">dumpAsBinaryString[0]</td>
-<td>0.188s</td>
-<td class="failures">failed</td>
+<td class="success">dumpAsBinaryString[0]</td>
+<td>0.051s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">dumpAsBinaryString[1]</td>
-<td>0.024s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">dumpAsBinaryString[2]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numberOfZeros[0]</td>
-<td>0.002s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -165,41 +122,41 @@ com.test.t.HW4Solution@1b3bafe7
 </tr>
 <tr>
 <td class="success">numberOfZeros[2]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">sumOfAllFactors[0]</td>
 <td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">sumOfAllFactors[0]</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">sumOfAllFactors[1]</td>
-<td>0.003s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">sumOfAllFactors[2]</td>
-<td>0.002s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>2.0
 ***********
 8.0
 ***********
-5.0
-***********
 6.0
+***********
+5.0
 ***********
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
@@ -215,7 +172,7 @@ com.test.t.HW4Solution@1b3bafe7
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/3/19 下午 01:12:20</p>
+<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/3/30 上午 11:25:48</p>
 </div>
 </div>
 </body>

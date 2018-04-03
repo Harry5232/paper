@@ -1,52 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JavaSpec" tests="12" skipped="0" failures="2" errors="0" timestamp="2018-03-19T05:12:18" hostname="harry" time="0.252">
+<testsuite name="JavaSpec" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-03-30T03:25:46" hostname="harry" time="0.069">
   <properties/>
-  <testcase name="dumpAsBinaryString[0]" classname="JavaSpec" time="0.188">
-    <failure message="Condition not satisfied:&#10;&#10;ob.dumpAsBinaryString(a,b) == c&#10;|  |                  | |  |  |&#10;|  |                  | 20 |  00000000_00000000_00000000001010&#10;|  |                  10   false&#10;|  |                       3 differences (91% similarity)&#10;|  |                       00000000_00000000_00000000(_)00(00)1010&#10;|  |                       00000000_00000000_00000000(-)00(--)1010&#10;|  00000000_00000000_00000000_00001010&#10;com.test.t.HW4Solution@1b3bafe7&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-ob.dumpAsBinaryString(a,b) == c
-|  |                  | |  |  |
-|  |                  | 20 |  00000000_00000000_00000000001010
-|  |                  10   false
-|  |                       3 differences (91% similarity)
-|  |                       00000000_00000000_00000000(_)00(00)1010
-|  |                       00000000_00000000_00000000(-)00(--)1010
-|  00000000_00000000_00000000_00001010
-com.test.t.HW4Solution@1b3bafe7
-
-	at JavaSpec.dumpAsBinaryString(JavaSpec.groovy:16)
-</failure>
-  </testcase>
-  <testcase name="dumpAsBinaryString[1]" classname="JavaSpec" time="0.024"/>
-  <testcase name="dumpAsBinaryString[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="bits2Float[0]" classname="JavaSpec" time="0.01"/>
-  <testcase name="bits2Float[1]" classname="JavaSpec" time="0.003">
-    <failure message="Condition not satisfied:&#10;&#10;ob.bits2Float(a,b,c) == d&#10;|  |          | | |  |  |&#10;|  |          35| 1  |  -1.2325953&#10;|  |            21   false&#10;|  -1.2325953E-32&#10;com.test.t.HW4Solution@5d8fbcdf&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-ob.bits2Float(a,b,c) == d
-|  |          | | |  |  |
-|  |          35| 1  |  -1.2325953
-|  |            21   false
-|  -1.2325953E-32
-com.test.t.HW4Solution@5d8fbcdf
-
-	at JavaSpec.bits2Float(JavaSpec.groovy:35)
-</failure>
-  </testcase>
-  <testcase name="bits2Float[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[1]" classname="JavaSpec" time="0.003"/>
-  <testcase name="sumOfAllFactors[2]" classname="JavaSpec" time="0.002"/>
-  <testcase name="numberOfZeros[0]" classname="JavaSpec" time="0.002"/>
+  <testcase name="dumpAsBinaryString[0]" classname="JavaSpec" time="0.051"/>
+  <testcase name="dumpAsBinaryString[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="dumpAsBinaryString[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="bits2Float[0]" classname="JavaSpec" time="0.005"/>
+  <testcase name="bits2Float[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="bits2Float[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfZeros[0]" classname="JavaSpec" time="0.0"/>
   <testcase name="numberOfZeros[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfZeros[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfZeros[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="sumOfAllFactors[0]" classname="JavaSpec" time="0.0"/>
+  <testcase name="sumOfAllFactors[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="sumOfAllFactors[2]" classname="JavaSpec" time="0.0"/>
   <system-out><![CDATA[2.0
 ***********
 8.0
 ***********
-5.0
-***********
 6.0
+***********
+5.0
 ***********
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}

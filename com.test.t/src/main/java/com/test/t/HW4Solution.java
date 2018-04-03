@@ -12,6 +12,7 @@ import java.util.TreeSet;
 
 import com.test.t.Grade.Type;
 
+
 public class HW4Solution {
 	@Grade(value = 5, type = Type.HARD)
 	@Validate(number = 3, ex = {

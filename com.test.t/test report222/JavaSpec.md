@@ -1,21 +1,21 @@
-# Report for JavaSpec, created on 3/19, by Harry.
+# Report for JavaSpec, created on 3/30, by Harry.
 
 ##Summary
 
 * Total Runs: 12
-* Success Rate: 83.33%
-* Failures: 2
+* Success Rate: 100.0%
+* Failures: 0
 * Errors:   0
 * Skipped:  0
-* Total time: 1.603 seconds
-* Total scores: 11.0
+* Total time: 1.214 seconds
+* Total scores: 21.0
 
 
 ## Features
 
 ### dumpAsBinaryString [0]
 
-Result: **FAILURE**
+Result: **PASS**
 
 * Given: 
 
@@ -28,22 +28,10 @@ Result: **FAILURE**
 * Where: 
 
 
-|   a   |   b   |                  c                  |
-|-------|-------|-------------------------------------|
-|  10   |  20   |  00000000_00000000_00000000001010   |(FAIL)
+|   a   |   b   |                   c                   |
+|-------|-------|---------------------------------------|
+|  10   |  20   |  00000000_00000000_00000000_00001010  |(PASS)
 
-
-Condition not satisfied:
-
-ob.dumpAsBinaryString(a,b) == c
-|  |                  | |  |  |
-|  |                  | 20 |  00000000_00000000_00000000001010
-|  |                  10   false
-|  |                       3 differences (91% similarity)
-|  |                       00000000_00000000_00000000(_)00(00)1010
-|  |                       00000000_00000000_00000000(-)00(--)1010
-|  00000000_00000000_00000000_00001010
-com.test.t.HW4Solution@1b3bafe7
 
 --------------------------------------------------------------------
 
@@ -115,7 +103,7 @@ Result: **PASS**
 
 ### bits2Float [1]
 
-Result: **FAILURE**
+Result: **PASS**
 
 * Given: 
 
@@ -128,19 +116,10 @@ Result: **FAILURE**
 * Where: 
 
 
-|   a   |   b   |  c  |       d       |
-|-------|-------|-----|---------------|
-|  35   |  21   |  1  |  -1.2325953   |(FAIL)
+|   a   |   b   |   c   |         d         |
+|-------|-------|-------|-------------------|
+|  50   |  44   |  19   |  -1.0339781E-25   |(PASS)
 
-
-Condition not satisfied:
-
-ob.bits2Float(a,b,c) == d
-|  |          | | |  |  |
-|  |          35| 1  |  -1.2325953
-|  |            21   false
-|  -1.2325953E-32
-com.test.t.HW4Solution@5d8fbcdf
 
 --------------------------------------------------------------------
 
@@ -159,75 +138,9 @@ Result: **PASS**
 * Where: 
 
 
-|   a   |   b   |   c   |         d         |
-|-------|-------|-------|-------------------|
-|  35   |  44   |  46   |  -1.0339814E-25   |(PASS)
-
-
---------------------------------------------------------------------
-
-### sumOfAllFactors [0]
-
-Result: **PASS**
-
-* Given: 
-
-     HW4Solution ob = new HW4Solution()
-
-* Expect: 
-
-     ob.sumOfAllFactors(a,b) == c
-
-* Where: 
-
-
-|   a   |    b    |   c   |
-|-------|---------|-------|
-|  50   |  apple  |  93   |(PASS)
-
-
---------------------------------------------------------------------
-
-### sumOfAllFactors [1]
-
-Result: **PASS**
-
-* Given: 
-
-     HW4Solution ob = new HW4Solution()
-
-* Expect: 
-
-     ob.sumOfAllFactors(a,b) == c
-
-* Where: 
-
-
-|   a   |     b     |   c   |
-|-------|-----------|-------|
-|  80   |  banana   |  186  |(PASS)
-
-
---------------------------------------------------------------------
-
-### sumOfAllFactors [2]
-
-Result: **PASS**
-
-* Given: 
-
-     HW4Solution ob = new HW4Solution()
-
-* Expect: 
-
-     ob.sumOfAllFactors(a,b) == c
-
-* Where: 
-
-
-|   a   |    b    |   c   |
-|-------|---------|-------|
-|  35   |  apple  |  48   |(PASS)
+|   a   |   b   |   c   |        d        |
+|-------|-------|-------|-----------------|
+|  37   |  37   |  17   |  -8.077952E-28  |(PASS)
 
 
 --------------------------------------------------------------------
@@ -293,7 +206,73 @@ Result: **PASS**
 
 |   a   |   b   |   c   |
 |-------|-------|-------|
-|  22   |  37   |  29   |(PASS)
+|  14   |  13   |  29   |(PASS)
+
+
+--------------------------------------------------------------------
+
+### sumOfAllFactors [0]
+
+Result: **PASS**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.sumOfAllFactors(a,b) == c
+
+* Where: 
+
+
+|   a   |    b    |   c   |
+|-------|---------|-------|
+|  50   |  apple  |  93   |(PASS)
+
+
+--------------------------------------------------------------------
+
+### sumOfAllFactors [1]
+
+Result: **PASS**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.sumOfAllFactors(a,b) == c
+
+* Where: 
+
+
+|   a   |     b     |   c   |
+|-------|-----------|-------|
+|  80   |  banana   |  186  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### sumOfAllFactors [2]
+
+Result: **PASS**
+
+* Given: 
+
+     HW4Solution ob = new HW4Solution()
+
+* Expect: 
+
+     ob.sumOfAllFactors(a,b) == c
+
+* Where: 
+
+
+|   a   |    b    |   c   |
+|-------|---------|-------|
+|  41   |  apple  |  42   |(PASS)
 
 
 --------------------------------------------------------------------

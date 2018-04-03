@@ -17,7 +17,7 @@ class JavaSpec extends Specification {
              
     where:
               a | b || c
-         	  10| 20|| "00000000_00000000_00000000001010"
+         	  10| 20|| "00000000_00000000_00000000_00001010"
               45| 60|| "00000000_00000000_00000000_00101101"
               70| 80|| "00000000_00000000_00000000_01000110"
                  	     
@@ -37,27 +37,8 @@ class JavaSpec extends Specification {
     where:
               a | b | c || d
          	  1| 10| 5|| (float)6.018535E-36
-              35| 21| 1|| (float)-1.2325953
-              35| 44| 46|| (float)-1.0339814E-25
-                 	     
-  }
- 
-
- //"HARD" type
- //3 test cases  
- @Scores(points=5.0f)
- @Unroll
- def "sumOfAllFactors"() {
-    setup:
-            HW4Solution ob = new HW4Solution();
-    expect:
-            ob.sumOfAllFactors(a,b) == c
-             
-    where:
-              a | b || c
-         	  50| "apple"|| (int)93
-              80| "banana"|| (int)186
-              35| "apple"|| (int)48
+              50| 44| 19|| (float)-1.0339781E-25
+              37| 37| 17|| (float)-8.077952E-28
                  	     
   }
  
@@ -76,7 +57,26 @@ class JavaSpec extends Specification {
               a | b || c
          	  30| 40|| (int)28
               50| 70|| (int)29
-              22| 37|| (int)29
+              14| 13|| (int)29
+                 	     
+  }
+ 
+
+ //"HARD" type
+ //3 test cases  
+ @Scores(points=5.0f)
+ @Unroll
+ def "sumOfAllFactors"() {
+    setup:
+            HW4Solution ob = new HW4Solution();
+    expect:
+            ob.sumOfAllFactors(a,b) == c
+             
+    where:
+              a | b || c
+         	  50| "apple"|| (int)93
+              80| "banana"|| (int)186
+              41| "apple"|| (int)42
                  	     
   }
  

@@ -2,23 +2,23 @@
 
 ## Specifications summary
 
-<small>Created on Mon Mar 19 13:12:20 CST 2018 by Harry</small>
+<small>Created on Fri Mar 30 11:25:48 CST 2018 by Harry</small>
 
 
 
-|   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success | Total    |  Total   |                          
-|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate    | time(ms) |  scores  |
-|----------|----------|----------|----------|----------|----------|----------|----------|
-|         1|         0|         1|         2|         0|       0.0|    1603.0||
+|   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success         | Total    |  Total   |                          
+|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate            | time(ms) |  scores  |
+|----------|----------|----------|----------|----------|------------------|----------|----------|
+|         1|         1|         0|         0|         0|               1.0|    1214.0|      21.0|
 
 
 
 ## Specifications
 
 
-|   Name   | Features |  Failed  |  Errors  |  Skipped | Success  |   Time   |
-|   Spec   |          |          |          |          |   rate   |   (ms)   |
-|----------|----------|----------|----------|----------|----------|----------|
-|  JavaSpec|        12|         2|         0|         0|0.8333333333333334|      1603|
+|   Name   | Features |  Failed  |  Errors  |  Skipped | Success          |   Time   |   Total   |
+|   Spec   |          |          |          |          |   rate           |   (ms)   |   scores  | 
+|----------|----------|----------|----------|----------|------------------|----------|-----------|
+|  JavaSpec|        12|         0|         0|         0|       1.0|      1214|      21.0
 
 
