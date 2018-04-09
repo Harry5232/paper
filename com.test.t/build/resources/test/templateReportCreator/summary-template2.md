@@ -49,8 +49,8 @@ def f2 = {num ->
 
 %>
 
-|   Name   | Features |  Failed  |  Errors  |  Skipped | Success          |   Time   |   Total   |
-|   Spec   |          |          |          |          |   rate           |   (ms)   |   scores  | 
+|   Name   | Features |  Failed  |  Errors  |  Skipped |      Success     |   Time   |   Total   |
+|   Spec   |          |          |          |          |        rate      |   (ms)   |   scores  | 
 |----------|----------|----------|----------|----------|------------------|----------|-----------|
 <% data.each { name, map ->
       def s = map.stats
@@ -64,7 +64,7 @@ def t26 = ( String.valueOf(s.successRate) ).length()
 def t27 = ( String.valueOf(s.time) ).length()
 def t28 = ( String.valueOf(s.grades) ).length()
       
- %>|<%f(t21)%>$name|<%f(t22)%>${s.totalRuns}|<%f(t23)%>${s.failures}|<%f(t24)%>${s.errors}|<%f(t25)%>${s.skipped}|<%f(t26)%>${s.successRate}|<%f(t27)%>${s.time}|<%f(t28)%>${s.grades}
+ %>|<%f(t21)%>$name|<%f(t22)%>${s.totalRuns}|<%f(t23)%>${s.failures}|<%f(t24)%>${s.errors}|<%f(t25)%>${s.skipped}|<%f2(t26)%>${s.successRate}|<%f(t27)%>${s.time}|<%f(t28)%>${s.grades} |
 <% }
  %>
 

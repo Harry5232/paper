@@ -1,278 +1,542 @@
-# Report for JavaSpec, created on 3/30, by Harry.
+# Report for JavaSpec, created on 4/4, by Harry.
 
 ##Summary
 
-* Total Runs: 12
+* Total Runs: 24
 * Success Rate: 100.0%
 * Failures: 0
 * Errors:   0
 * Skipped:  0
-* Total time: 1.214 seconds
-* Total scores: 21.0
+* Total time: 1.403 seconds
+* Total scores: 36.0
 
 
 ## Features
 
-### dumpAsBinaryString [0]
+### reverse [0]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.dumpAsBinaryString(a,b) == c
+     ob.reverse(a) == c
 
 * Where: 
 
 
-|   a   |   b   |                   c                   |
-|-------|-------|---------------------------------------|
-|  10   |  20   |  00000000_00000000_00000000_00001010  |(PASS)
+|   a   |  c  |
+|-------|-----|
+|  10   |  1  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### dumpAsBinaryString [1]
+### reverse [1]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.dumpAsBinaryString(a,b) == c
+     ob.reverse(a) == c
 
 * Where: 
 
 
-|   a   |   b   |                   c                   |
-|-------|-------|---------------------------------------|
-|  45   |  60   |  00000000_00000000_00000000_00101101  |(PASS)
+|   a   |   c   |
+|-------|-------|
+|  45   |  54   |(PASS)
 
 
 --------------------------------------------------------------------
 
-### dumpAsBinaryString [2]
+### reverse [2]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.dumpAsBinaryString(a,b) == c
+     ob.reverse(a) == c
 
 * Where: 
 
 
-|   a   |   b   |                   c                   |
-|-------|-------|---------------------------------------|
-|  70   |  80   |  00000000_00000000_00000000_01000110  |(PASS)
+|   a   |  c  |
+|-------|-----|
+|  70   |  7  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### bits2Float [0]
+### findAllArmstrongNumbers [0]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.bits2Float(a,b,c) == d
+     ob.findAllArmstrongNumbers(a,b) == c
 
 * Where: 
 
 
-|  a  |   b   |  c  |        d        |
-|-----|-------|-----|-----------------|
-|  1  |  10   |  5  |  6.018535E-36   |(PASS)
+|   a   |   b   |     c     |
+|-------|-------|-----------|
+|  200  |  400  |  370,371  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### bits2Float [1]
+### findAllArmstrongNumbers [1]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.bits2Float(a,b,c) == d
+     ob.findAllArmstrongNumbers(a,b) == c
 
 * Where: 
 
 
-|   a   |   b   |   c   |         d         |
-|-------|-------|-------|-------------------|
-|  50   |  44   |  19   |  -1.0339781E-25   |(PASS)
+|   a   |   b   |         c         |
+|-------|-------|-------------------|
+|  100  |  999  |  153,370,371,407  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### bits2Float [2]
+### findAllArmstrongNumbers [2]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.bits2Float(a,b,c) == d
+     ob.findAllArmstrongNumbers(a,b) == c
 
 * Where: 
 
 
-|   a   |   b   |   c   |        d        |
-|-------|-------|-------|-----------------|
-|  37   |  37   |  17   |  -8.077952E-28  |(PASS)
+|   a   |   b   |  c  |
+|-------|-------|-----|
+|  80   |  35   |     |(PASS)
 
 
 --------------------------------------------------------------------
 
-### numberOfZeros [0]
+### numberOfBitChanges [0]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.numberOfZeros(a,b) == c
+     ob.numberOfBitChanges(a) == c
 
 * Where: 
 
 
-|   a   |   b   |   c   |
-|-------|-------|-------|
-|  30   |  40   |  28   |(PASS)
+|   a   |  c  |
+|-------|-----|
+|  20   |  4  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### numberOfZeros [1]
+### numberOfBitChanges [1]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.numberOfZeros(a,b) == c
+     ob.numberOfBitChanges(a) == c
 
 * Where: 
 
 
-|   a   |   b   |   c   |
-|-------|-------|-------|
-|  50   |  70   |  29   |(PASS)
+|   a   |  c  |
+|-------|-----|
+|  35   |  3  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### numberOfZeros [2]
+### numberOfBitChanges [2]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.numberOfZeros(a,b) == c
+     ob.numberOfBitChanges(a) == c
 
 * Where: 
 
 
-|   a   |   b   |   c   |
-|-------|-------|-------|
-|  14   |  13   |  29   |(PASS)
+|  a  |  c  |
+|-----|-----|
+|  8  |  2  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [0]
+### isArmstrongNumber [0]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.sumOfAllFactors(a,b) == c
+     ob.isArmstrongNumber(a) == c
 
 * Where: 
 
 
-|   a   |    b    |   c   |
-|-------|---------|-------|
-|  50   |  apple  |  93   |(PASS)
+|   a   |    c    |
+|-------|---------|
+|  20   |  false  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [1]
+### isArmstrongNumber [1]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.sumOfAllFactors(a,b) == c
+     ob.isArmstrongNumber(a) == c
 
 * Where: 
 
 
-|   a   |     b     |   c   |
-|-------|-----------|-------|
-|  80   |  banana   |  186  |(PASS)
+|   a   |    c    |
+|-------|---------|
+|  60   |  false  |(PASS)
 
 
 --------------------------------------------------------------------
 
-### sumOfAllFactors [2]
+### isArmstrongNumber [2]
 
 Result: **PASS**
 
 * Given: 
 
-     HW4Solution ob = new HW4Solution()
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
 
 * Expect: 
 
-     ob.sumOfAllFactors(a,b) == c
+     ob.isArmstrongNumber(a) == c
 
 * Where: 
 
 
-|   a   |    b    |   c   |
-|-------|---------|-------|
-|  41   |  apple  |  42   |(PASS)
+|   a   |    c    |
+|-------|---------|
+|  80   |  false  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### integrationOfSquare [0]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.integrationOfSquare(a,b,c) == d
+
+* Where: 
+
+
+|    a    |    b    |   c   |           d           |
+|---------|---------|-------|-----------------------|
+|  20.0   |  35.0   |  10   |  12986.111111111117   |(PASS)
+
+
+--------------------------------------------------------------------
+
+### integrationOfSquare [1]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.integrationOfSquare(a,b,c) == d
+
+* Where: 
+
+
+|    a    |    b    |   c   |           d           |
+|---------|---------|-------|-----------------------|
+|  60.0   |  35.0   |  10   |  -64441.87242798354   |(PASS)
+
+
+--------------------------------------------------------------------
+
+### integrationOfSquare [2]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.integrationOfSquare(a,b,c) == d
+
+* Where: 
+
+
+|    a    |    b    |   c   |      d      |
+|---------|---------|-------|-------------|
+|  80.0   |  35.0   |  10   |  -175625.0  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numOfFactors [0]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numOfFactors(a,b,c) == d
+
+* Where: 
+
+
+|   a   |   b   |   c   |  d  |
+|-------|-------|-------|-----|
+|  10   |  20   |  20   |  0  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numOfFactors [1]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numOfFactors(a,b,c) == d
+
+* Where: 
+
+
+|   a   |   b   |   c   |  d  |
+|-------|-------|-------|-----|
+|  45   |  60   |  20   |  0  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numOfFactors [2]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numOfFactors(a,b,c) == d
+
+* Where: 
+
+
+|   a   |   b   |   c   |  d  |
+|-------|-------|-------|-----|
+|  70   |  80   |  20   |  0  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### diamond [0]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.diamond(a) == c
+
+* Where: 
+
+
+|  a  |                          c                          |
+|-----|-----------------------------------------------------|
+|  4  |  ---4-----333---22222-1111111-22222---333-----4---  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### diamond [1]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.diamond(a) == c
+
+* Where: 
+
+
+|  a  |              c              |
+|-----|-----------------------------|
+|  3  |  --3---222-11111-222---3--  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### diamond [2]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.diamond(a) == c
+
+* Where: 
+
+
+|  a  |                                                              c                                                              |
+|-----|-----------------------------------------------------------------------------------------------------------------------------|
+|  6  |  -----6---------555-------44444-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numberOfBitOne [0]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numberOfBitOne(a) == c
+
+* Where: 
+
+
+|   a   |  c  |
+|-------|-----|
+|  20   |  2  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numberOfBitOne [1]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numberOfBitOne(a) == c
+
+* Where: 
+
+
+|   a   |  c  |
+|-------|-----|
+|  60   |  4  |(PASS)
+
+
+--------------------------------------------------------------------
+
+### numberOfBitOne [2]
+
+Result: **PASS**
+
+* Given: 
+
+     com.test.t.HW1Solution ob = new com.test.t.HW1Solution()
+
+* Expect: 
+
+     ob.numberOfBitOne(a) == c
+
+* Where: 
+
+
+|   a   |  c  |
+|-------|-----|
+|  80   |  2  |(PASS)
 
 
 --------------------------------------------------------------------

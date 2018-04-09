@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JavaSpec" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-03-30T03:25:46" hostname="harry" time="0.069">
+<testsuite name="JavaSpec" tests="24" skipped="0" failures="0" errors="0" timestamp="2018-04-04T14:51:46" hostname="harry" time="0.101">
   <properties/>
-  <testcase name="dumpAsBinaryString[0]" classname="JavaSpec" time="0.051"/>
-  <testcase name="dumpAsBinaryString[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="dumpAsBinaryString[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="bits2Float[0]" classname="JavaSpec" time="0.005"/>
-  <testcase name="bits2Float[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="bits2Float[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="numberOfZeros[0]" classname="JavaSpec" time="0.0"/>
-  <testcase name="numberOfZeros[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfZeros[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="sumOfAllFactors[0]" classname="JavaSpec" time="0.0"/>
-  <testcase name="sumOfAllFactors[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="sumOfAllFactors[2]" classname="JavaSpec" time="0.0"/>
-  <system-out><![CDATA[2.0
+  <testcase name="reverse[0]" classname="JavaSpec" time="0.053"/>
+  <testcase name="reverse[1]" classname="JavaSpec" time="0.001"/>
+  <testcase name="reverse[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="findAllArmstrongNumbers[0]" classname="JavaSpec" time="0.001"/>
+  <testcase name="findAllArmstrongNumbers[1]" classname="JavaSpec" time="0.001"/>
+  <testcase name="findAllArmstrongNumbers[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numberOfBitChanges[0]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numberOfBitChanges[1]" classname="JavaSpec" time="0.002"/>
+  <testcase name="numberOfBitChanges[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="isArmstrongNumber[0]" classname="JavaSpec" time="0.0"/>
+  <testcase name="isArmstrongNumber[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="isArmstrongNumber[2]" classname="JavaSpec" time="0.0"/>
+  <testcase name="integrationOfSquare[0]" classname="JavaSpec" time="0.001"/>
+  <testcase name="integrationOfSquare[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="integrationOfSquare[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numOfFactors[0]" classname="JavaSpec" time="0.003"/>
+  <testcase name="numOfFactors[1]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numOfFactors[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="diamond[0]" classname="JavaSpec" time="0.002"/>
+  <testcase name="diamond[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="diamond[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numberOfBitOne[0]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfBitOne[1]" classname="JavaSpec" time="0.0"/>
+  <testcase name="numberOfBitOne[2]" classname="JavaSpec" time="0.001"/>
+  <system-out><![CDATA[7.0
 ***********
-8.0
+2.0
 ***********
-6.0
+4.0
+***********
+2.0
+***********
+2.0
 ***********
 5.0
+***********
+5.0
+***********
+9.0
 ***********
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}

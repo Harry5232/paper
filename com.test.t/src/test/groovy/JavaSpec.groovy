@@ -7,76 +7,152 @@ class JavaSpec extends Specification {
 
  //"DIFFICULT" type
  //3 test cases  
- @Scores(points=2.0f)
+ @Scores(points=7.0f)
  @Unroll
- def "dumpAsBinaryString"() {
+ def "reverse"() {
     setup:
-            HW4Solution ob = new HW4Solution();
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
     expect:
-            ob.dumpAsBinaryString(a,b) == c
+            ob.reverse(a) == c
              
     where:
-              a | b || c
-         	  10| 20|| "00000000_00000000_00000000_00001010"
-              45| 60|| "00000000_00000000_00000000_00101101"
-              70| 80|| "00000000_00000000_00000000_01000110"
+              a || c
+         	  10|| (int)1
+              45|| (int)54
+              70|| (int)7
                  	     
   }
  
 
- //"NORMAL" type
+ //"DIFFICULT" type
  //3 test cases  
- @Scores(points=8.0f)
+ @Scores(points=2.0f)
  @Unroll
- def "bits2Float"() {
+ def "findAllArmstrongNumbers"() {
     setup:
-            HW4Solution ob = new HW4Solution();
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
     expect:
-            ob.bits2Float(a,b,c) == d
+            ob.findAllArmstrongNumbers(a,b) == c
              
     where:
-              a | b | c || d
-         	  1| 10| 5|| (float)6.018535E-36
-              50| 44| 19|| (float)-1.0339781E-25
-              37| 37| 17|| (float)-8.077952E-28
+              a | b || c
+         	  200| 400|| "370,371"
+              100| 999|| "153,370,371,407"
+              80| 35|| ""
                  	     
   }
  
 
  //"EASY" type
  //3 test cases  
- @Scores(points=6.0f)
+ @Scores(points=4.0f)
  @Unroll
- def "numberOfZeros"() {
+ def "numberOfBitChanges"() {
     setup:
-            HW4Solution ob = new HW4Solution();
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
     expect:
-            ob.numberOfZeros(a,b) == c
+            ob.numberOfBitChanges(a) == c
              
     where:
-              a | b || c
-         	  30| 40|| (int)28
-              50| 70|| (int)29
-              14| 13|| (int)29
+              a || c
+         	  20|| (int)4
+              35|| (int)3
+              8|| (int)2
+                 	     
+  }
+ 
+
+ //"DIFFICULT" type
+ //3 test cases  
+ @Scores(points=2.0f)
+ @Unroll
+ def "isArmstrongNumber"() {
+    setup:
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
+    expect:
+            ob.isArmstrongNumber(a) == c
+             
+    where:
+              a || c
+         	  20|| (boolean)false
+              60|| (boolean)false
+              80|| (boolean)false
+                 	     
+  }
+ 
+
+ //"DIFFICULT" type
+ //3 test cases  
+ @Scores(points=2.0f)
+ @Unroll
+ def "integrationOfSquare"() {
+    setup:
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
+    expect:
+            ob.integrationOfSquare(a,b,c) == d
+             
+    where:
+              a | b | c || d
+         	  20.0| 35.0| 10|| (double)12986.111111111117
+              60.0| 35.0| 10|| (double)-64441.87242798354
+              80.0| 35.0| 10|| (double)-175625.0
+                 	     
+  }
+ 
+
+ //"DIFFICULT" type
+ //3 test cases  
+ @Scores(points=5.0f)
+ @Unroll
+ def "numOfFactors"() {
+    setup:
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
+    expect:
+            ob.numOfFactors(a,b,c) == d
+             
+    where:
+              a | b | c || d
+         	  10| 20| 20|| (int)0
+              45| 60| 20|| (int)0
+              70| 80| 20|| (int)0
+                 	     
+  }
+ 
+
+ //"EASY" type
+ //3 test cases  
+ @Scores(points=5.0f)
+ @Unroll
+ def "diamond"() {
+    setup:
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
+    expect:
+            ob.diamond(a) == c
+             
+    where:
+              a || c
+         	  4|| "---4-----333---22222-1111111-22222---333-----4---"
+              3|| "--3---222-11111-222---3--"
+              6|| "-----6---------555-------44444-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----"
                  	     
   }
  
 
  //"HARD" type
  //3 test cases  
- @Scores(points=5.0f)
+ @Scores(points=9.0f)
  @Unroll
- def "sumOfAllFactors"() {
+ def "numberOfBitOne"() {
     setup:
-            HW4Solution ob = new HW4Solution();
+            com.test.t.HW1Solution ob = new com.test.t.HW1Solution();
     expect:
-            ob.sumOfAllFactors(a,b) == c
+            ob.numberOfBitOne(a) == c
              
     where:
-              a | b || c
-         	  50| "apple"|| (int)93
-              80| "banana"|| (int)186
-              41| "apple"|| (int)42
+              a || c
+         	  20|| (int)2
+              60|| (int)4
+              80|| (int)2
                  	     
   }
  

@@ -16,9 +16,16 @@ public class E {
 	//TEST example
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List a = new ArrayList<String>();
-		a.add("s");
-		a.add("saa");
-		System.out.println(a);
+		int a  = 2;
+		int.class.getSimpleName();
+		String s = "aaaa";
+		s.getClass().getName();
+		System.out.println(s);
+		
+		
+	}
+	
+	public E (Object t1, Object t2){
+		
 	}
 }

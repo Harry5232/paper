@@ -10,9 +10,15 @@ import java.lang.annotation.RetentionPolicy;
 public @interface Ex {
 
 	String[] dataString() default {};
+	
+	char[] dataChar() default {};
 
 	int[] dataInt() default {};
-	
+
+	float[] dataFlo() default {};
+
+	double[] dataDou() default {};
+
 	String describe() default "";
 
 }

@@ -25,19 +25,23 @@ public class TemplateGenerator {
 
 	public static void main(String[] args) {
 		// 宣告class變數 method個數 屬性個數
-		HW4Solution t = new HW4Solution();
+		HW1Solution t = new HW1Solution();
 		Class className = t.getClass();
+		String clsName = className.toString();
+		String clsName2[] = clsName.split(" ");
+		String clsName3 = clsName2[1];
 
 		Method[] m = className.getDeclaredMethods();
 		int m_len = m.length; // method個數
-		List methods = new ArrayList<Object>();
+		List methods = new ArrayList<Object>(); // 最後要執行測試的methods
 
 		// 為每一個method放入變數
 		for (int i = 0; i < m_len; i++) {
 			// method名字 、類型
-			Object parType[] = m[i].getGenericParameterTypes();// int
+			Object parTypes[] = m[i].getGenericParameterTypes();// int
 			Object parReturn = m[i].getGenericReturnType(); // java.util.List<T>
 			Object TypeV[] = m[i].getTypeParameters(); // T
+
 
 			if (parReturn.toString().equals("class java.lang.String")) {
 				parReturn = (Object) "String";
@@ -51,11 +55,11 @@ public class TemplateGenerator {
 			String methodName = m[i].getName();
 			Grade g = m[i].getAnnotation(Grade.class);
 			Validate v = m[i].getAnnotation(Validate.class);
-			// Ex exam[] = v.ex();
-			if(g == null || v == null || v.test() == false){
+			// 代表沒有要測試
+			if (g == null || v == null || v.test() == false) {
 				continue;
 			}
-			
+
 			List exam = new ArrayList<Object>();
 			for (Ex k : v.ex()) {
 				exam.add(k);
@@ -71,16 +75,43 @@ public class TemplateGenerator {
 			List<Ex> exam2 = caseGenerate(testNum, examNum, exam);
 			List result = new ArrayList<Object>();
 
-
-			for (int h = 0; h < exam2.size(); h++) {
+			for (int h = 0; h < exam.size(); h++) {
 				// Object[] argment = ArrayUtils.toObject(exam[h].dataInt());
 				List argment = new ArrayList<Object>();
-				for (int num : ((Ex) exam2.get(h)).dataInt()) {
-					argment.add(num);
+
+				int snum = 0, inum = 0, dnum = 0, fnum = 0, cnum = 0;
+
+				String ds[] = ((Ex) exam.get(h)).dataString();
+				int di[] = ((Ex) exam.get(h)).dataInt();
+				double dd[] = ((Ex) exam.get(h)).dataDou();
+				float df[] = ((Ex) exam.get(h)).dataFlo();
+				char dc[] = ((Ex) exam.get(h)).dataChar();
+
+				for (Object parType : parTypes) {
+					
+					if (parType.toString().equals("String")) {
+						argment.add(ds[snum++]);
+						
+					} else if (parType.toString().equals("int")) {
+			
+						argment.add(di[inum++]);
+						
+					} else if (parType.toString().equals("double")) {
+						argment.add(dd[dnum++]);
+						
+					} else if (parType.toString().equals("float")) {
+						argment.add(df[fnum++]);
+						
+					} else if(parType.toString().equals("char")){
+						argment.add(dc[cnum++]);
+					}
+
 				}
-				for (String s : ((Ex) exam2.get(h)).dataString()) {
-					argment.add(s);
-				}
+				/*
+				 * for (int num : ((Ex) exam.get(h)).dataInt()) {
+				 * argment.add(num); } for (String s : ((Ex)
+				 * exam.get(h)).dataString()) { argment.add(s); }
+				 */
 
 				Object ob[] = argment.toArray();
 
@@ -88,7 +119,15 @@ public class TemplateGenerator {
 				try {
 
 					temp.add(ob);
-					temp.add(m[i].invoke(t, ob));
+
+					Object r = m[i].invoke(t, ob);
+//					if (r instanceof String) {
+//						String r2 = ((String) r).replace("\n", "");
+//						temp.add(r2);
+//					} else {
+//						temp.add(r);
+//					}
+					temp.add(r);
 					result.add(temp);
 
 				} catch (IllegalAccessException e) {
@@ -103,13 +142,14 @@ public class TemplateGenerator {
 				}
 			}
 
+			A.put("className", clsName3);
 			A.put("methodName", methodName);
 			A.put("type", type);// type
 			A.put("total", total);// total score
 			A.put("score", score);// score
 			A.put("weight", weight);// score weight
 
-			A.put("parType", parType);
+			A.put("parType", parTypes);
 			A.put("paras", paras);
 			A.put("TypeV", TypeV);
 			A.put("parReturn", parReturn);
@@ -119,7 +159,7 @@ public class TemplateGenerator {
 			A.put("result", result);
 
 			methods.add(A);
-		 
+
 		}
 
 		// 設定Velocity engine各項參數
@@ -129,7 +169,7 @@ public class TemplateGenerator {
 				ClasspathResourceLoader.class.getName());
 
 		ve.init();
-		
+
 		// 選擇template
 		Template JavaTpt = ve.getTemplate("Javatemplate.vm");
 		VelocityContext ctx = new VelocityContext();
@@ -186,15 +226,32 @@ public class TemplateGenerator {
 						// TODO Auto-generated method stub
 						List<Integer> nlist = new ArrayList<Integer>();
 						for (int k = 0; k < intNum; k++) {
-							nlist.add((int)( Math.random() * 50)+ 1) ;
+							nlist.add((int) (Math.random() * 50) + 1);
 						}
 
 						Integer[] integers = nlist.toArray(new Integer[nlist
 								.size()]);
 						int[] primitives = ArrayUtils.toPrimitive(integers);
 
-
 						return primitives;
+					}
+
+					@Override
+					public float[] dataFlo() {
+						// TODO Auto-generated method stub
+						return null;
+					}
+
+					@Override
+					public double[] dataDou() {
+						// TODO Auto-generated method stub
+						return null;
+					}
+
+					@Override
+					public char[] dataChar() {
+						// TODO Auto-generated method stub
+						return null;
 					}
 				};
 				t.add(exTemp);

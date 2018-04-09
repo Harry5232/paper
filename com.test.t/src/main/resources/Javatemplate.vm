@@ -10,7 +10,7 @@ class JavaSpec extends Specification {
  @Unroll
  def "${method.get("methodName")}"() {
     setup:
-            HW4Solution ob = new HW4Solution();
+            ${method.get("className")} ob = new ${method.get("className")}();
     expect:
       #if(${method.get("numPara")} == 1)
       ob.${method.get("methodName")}(a) == c
