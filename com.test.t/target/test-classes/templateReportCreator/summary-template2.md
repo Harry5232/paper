@@ -37,8 +37,8 @@ def f2 = {num ->
 %>
 
 
-|   Total  |  Passed  |  Failed  | Feature  |  Feature |  Success         | Total    |  Total   |                          
-|   Spec   |   Spec   |   Spec   | failures |  errors  |  rate            | time(ms) |  scores  |
+|   Total  |  Passed  |  Failed  | Feature  |  Feature |     Success      |  Total   |   Total  |                          
+|   Spec   |   Spec   |   Spec   | failures |  errors  |      rate        | time(ms) |   scores |
 |----------|----------|----------|----------|----------|------------------|----------|----------|
 |<%f(t1)%>${stats.total}|<%f(t2)%>${stats.passed}|<%f(t3)%>${stats.failed}|<%f(t4)%>${stats.fFails}|<%f(t5)%>${stats.fErrors}|<%f2(t6)%>${stats.successRate}|<%f(t7)%>${stats.time}|<%f(t8)%>${stats2.grades}|
 
@@ -49,9 +49,9 @@ def f2 = {num ->
 
 %>
 
-|   Name   | Features |  Failed  |  Errors  |  Skipped |      Success     |   Time   |   Total   |
-|   Spec   |          |          |          |          |        rate      |   (ms)   |   scores  | 
-|----------|----------|----------|----------|----------|------------------|----------|-----------|
+|   Name   | Features |  Failed  |  Errors  |  Skipped |      Success     |   Time   |   Total  |
+|   Spec   |          |          |          |          |       rate       |   (ms)   |   scores |
+|----------|----------|----------|----------|----------|------------------|----------|----------|
 <% data.each { name, map ->
       def s = map.stats
 //用來對齊
@@ -60,11 +60,11 @@ def t22 = ( String.valueOf(s.totalRuns) ).length()
 def t23 = ( String.valueOf(s.failures) ).length()
 def t24 = ( String.valueOf(s.errors) ).length()
 def t25 = ( String.valueOf(s.skipped) ).length()
-def t26 = ( String.valueOf(s.successRate) ).length()
+def t26 = ( String.valueOf(s.successRate2) ).length()
 def t27 = ( String.valueOf(s.time) ).length()
 def t28 = ( String.valueOf(s.grades) ).length()
       
- %>|<%f(t21)%>$name|<%f(t22)%>${s.totalRuns}|<%f(t23)%>${s.failures}|<%f(t24)%>${s.errors}|<%f(t25)%>${s.skipped}|<%f2(t26)%>${s.successRate}|<%f(t27)%>${s.time}|<%f(t28)%>${s.grades} |
+ %>|<%f(t21)%>$name|<%f(t22)%>${s.totalRuns}|<%f(t23)%>${s.failures}|<%f(t24)%>${s.errors}|<%f(t25)%>${s.skipped}|<%f2(t26)%>${s.successRate2}|<%f(t27)%>${s.time}|<%f(t28)%>${s.grades}|
 <% }
  %>
 
