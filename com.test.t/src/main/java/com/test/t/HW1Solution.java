@@ -312,11 +312,11 @@ public class HW1Solution {
 		String rlt = "" ;
 		
 		for(int k = n, t =1; k> 0; k--, t += 2) {
-			rlt += nch('-', k-1) + nch((char)('0'+k), t) + nch('-', k-1); //+'\n'
+			rlt += nch('-', k-1) + nch((char)('0'+k), t) + nch('-', k-1)+"\n"; 
 		}
 		
 		for(int k = 2, t = n*2 - 3 ; k <= n; k++, t -= 2) {
-			rlt += nch('-', k-1) + nch((char)('0'+k), t) + nch('-', k-1); //+'\n'
+			rlt += nch('-', k-1) + nch((char)('0'+k), t) + nch('-', k-1)+"\n"; //
 		}
 		
 		return rlt;

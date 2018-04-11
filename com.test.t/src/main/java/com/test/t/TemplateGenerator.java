@@ -121,13 +121,14 @@ public class TemplateGenerator {
 					temp.add(ob);
 
 					Object r = m[i].invoke(t, ob);
-//					if (r instanceof String) {
-//						String r2 = ((String) r).replace("\n", "");
-//						temp.add(r2);
-//					} else {
-//						temp.add(r);
-//					}
-					temp.add(r);
+					if (r instanceof String) {
+						String r2 = ((String) r).replace("\r", "\\n");
+						String r3 = ((String) r2).replace("\n", "\\n");
+						temp.add(r3);
+					} else {
+						temp.add(r);
+					}
+					//temp.add(r);
 					result.add(temp);
 
 				} catch (IllegalAccessException e) {

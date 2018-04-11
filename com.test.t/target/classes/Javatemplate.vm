@@ -6,7 +6,7 @@ class JavaSpec extends Specification {
  #foreach ($method in ${methods}) ${newline}
  //"${method.get("type")}" type
  @Scores(points=${method.get("score")}f)
- //@Unroll
+ @Unroll
  def "${method.get("methodName")}"() {
     setup:
             ${method.get("className")} ob = new ${method.get("className")}();

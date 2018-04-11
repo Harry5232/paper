@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">4</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.283s</div>
+<div class="counter">0.251s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">83%</div>
+<div class="percent">95%</div>
 <p>successful</p>
 </div>
 </td>
@@ -67,7 +67,10 @@
 <a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
@@ -80,71 +83,27 @@
 
 ob.diamond(a) == c
 |  |       |  |  |
-|  |       4  |  ---4-----3332---22222-1111111-22222---333-----4---
+|  |       4  |  ---4---
+|  |          |  --33--
+|  |          |  -22222-
+|  |          |  1111111
+|  |          |  -22222-
+|  |          |  --333--
+|  |          |  ---4---
 |  |          false
 |  |          1 difference (98% similarity)
-|  |          ---4-----333(-)---22222-1111111-22222---333-----4---
-|  |          ---4-----333(2)---22222-1111111-22222---333-----4---
-|  ---4-----333---22222-1111111-22222---333-----4---
+|  |          ---4---\n--33(3)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  |          ---4---\n--33(-)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  ---4---
+|  --333--
+|  -22222-
+|  1111111
+|  -22222-
+|  --333--
+|  ---4---
 com.test.t.HW1Solution@1d7b493a
 
-	at JavaSpec.diamond(JavaSpec.groovy:132)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="diamond[1]"></a>
-<h3 class="failures">diamond[1]</h3>
-<span class="code">
-<pre>Condition not satisfied:
-
-ob.diamond(a) == c
-|  |       |  |  |
-|  |       3  |  --3---222-11111-222-r--3--
-|  |          false
-|  |          1 difference (96% similarity)
-|  |          --3---222-11111-222-(-)--3--
-|  |          --3---222-11111-222-(r)--3--
-|  --3---222-11111-222---3--
-com.test.t.HW1Solution@e291925
-
-	at JavaSpec.diamond(JavaSpec.groovy:132)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="diamond[2]"></a>
-<h3 class="failures">diamond[2]</h3>
-<span class="code">
-<pre>Condition not satisfied:
-
-ob.diamond(a) == c
-|  |       |  |  |
-|  |       6  |  -----6---------555-------444444-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----
-|  |          false
-|  |          1 difference (99% similarity)
-|  |          -----6---------555-------44444(-)-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----
-|  |          -----6---------555-------44444(4)-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----
-|  -----6---------555-------44444-----3333333---222222222-11111111111-222222222---3333333-----44444-------555---------6-----
-com.test.t.HW1Solution@42b28e6
-
-	at JavaSpec.diamond(JavaSpec.groovy:132)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="numberOfBitOne[1]"></a>
-<h3 class="failures">numberOfBitOne[1]</h3>
-<span class="code">
-<pre>Condition not satisfied:
-
-ob.numberOfBitOne(a) == c
-|  |              |  |  |
-|  4              60 |  40
-|                    false
-com.test.t.HW1Solution@65e99201
-
-	at JavaSpec.numberOfBitOne(JavaSpec.groovy:151)
+	at JavaSpec.diamond(JavaSpec.groovy:123)
 </pre>
 </span>
 </div>
@@ -161,22 +120,22 @@ com.test.t.HW1Solution@65e99201
 </thead>
 <tr>
 <td class="failures">diamond[0]</td>
-<td>0.216s</td>
+<td>0.195s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="failures">diamond[1]</td>
-<td>0.003s</td>
-<td class="failures">failed</td>
+<td class="success">diamond[1]</td>
+<td>0s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">diamond[2]</td>
-<td>0.002s</td>
-<td class="failures">failed</td>
+<td class="success">diamond[2]</td>
+<td>0s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findAllArmstrongNumbers[0]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -191,17 +150,17 @@ com.test.t.HW1Solution@65e99201
 </tr>
 <tr>
 <td class="success">integrationOfSquare[0]</td>
-<td>0s</td>
+<td>0.042s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">integrationOfSquare[1]</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">integrationOfSquare[2]</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -216,17 +175,17 @@ com.test.t.HW1Solution@65e99201
 </tr>
 <tr>
 <td class="success">isArmstrongNumber[2]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numOfFactors[0]</td>
-<td>0.004s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numOfFactors[1]</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -236,28 +195,28 @@ com.test.t.HW1Solution@65e99201
 </tr>
 <tr>
 <td class="success">numberOfBitChanges[0]</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numberOfBitChanges[1]</td>
-<td>0.004s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numberOfBitChanges[2]</td>
-<td>0s</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numberOfBitOne[0]</td>
-<td>0s</td>
+<td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">numberOfBitOne[1]</td>
-<td>0.003s</td>
-<td class="failures">failed</td>
+<td class="success">numberOfBitOne[1]</td>
+<td>0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">numberOfBitOne[2]</td>
@@ -266,22 +225,44 @@ com.test.t.HW1Solution@65e99201
 </tr>
 <tr>
 <td class="success">reverse[0]</td>
-<td>0.042s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">reverse[1]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">reverse[2]</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
 <div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2.0
+***********
+7.0
+***********
+2.0
+***********
+2.0
+***********
+5.0
+***********
+9.0
+***********
+5.0
+***********
+4.0
+***********
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
@@ -297,7 +278,7 @@ com.test.t.HW1Solution@65e99201
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/4/11 上午 11:59:48</p>
+<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/4/11 下午 08:38:43</p>
 </div>
 </div>
 </body>
