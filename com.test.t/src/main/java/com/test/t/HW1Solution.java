@@ -24,8 +24,7 @@ public class HW1Solution {
 	 * @return the number of factors of n located in [s,e].
 	 */
 	@Grade(value = 5, type = Type.DIFFICULT)
-	@Validate(number = 3, ex = { @Ex(dataInt = { 10, 20, 20 }),
-			@Ex(dataInt = { 45, 60, 20 }), @Ex(dataInt = { 70, 80, 20 }) })
+	@Validate(number = 3, ex = { @Ex(dataInt = { 10, 20, 20 })})  //, @Ex(dataInt = { 45, 60, 20 }), @Ex(dataInt = { 70, 80, 20 }) 
 	public static int numOfFactors(int n, int s, int e) {
 		// TO-DO: place your code here!
 		// return -1;
@@ -50,8 +49,8 @@ public class HW1Solution {
 	 * @return the reversal of n.
 	 */
 	@Grade(value = 7, type = Type.DIFFICULT)
-	@Validate(number = 3, ex = { @Ex(dataInt = { 10 }),
-			@Ex(dataInt = { 45 }), @Ex(dataInt = { 70 }) })
+	@Validate(number = 5, ex = { @Ex(dataInt = { 10 })
+			 }) //@Ex(dataInt = { 45 }), @Ex(dataInt = { 70 })
 	public static int reverse(int n) {
 		// TO-DO: put your code here!
 		// return 0 ;

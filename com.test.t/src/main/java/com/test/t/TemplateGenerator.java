@@ -55,6 +55,7 @@ public class TemplateGenerator {
 			String methodName = m[i].getName();
 			Grade g = m[i].getAnnotation(Grade.class);
 			Validate v = m[i].getAnnotation(Validate.class);
+			
 			// 代表沒有要測試
 			if (g == null || v == null || v.test() == false) {
 				continue;
@@ -72,7 +73,8 @@ public class TemplateGenerator {
 			int testNum = v.number();
 			int examNum = exam.size();
 
-			List<Ex> exam2 = caseGenerate(testNum, examNum, exam);
+			caseGenerate(testNum, examNum, exam);  //補足測試組數
+			
 			List result = new ArrayList<Object>();
 
 			for (int h = 0; h < exam.size(); h++) {
@@ -128,7 +130,7 @@ public class TemplateGenerator {
 					} else {
 						temp.add(r);
 					}
-					//temp.add(r);
+					
 					result.add(temp);
 
 				} catch (IllegalAccessException e) {
@@ -198,7 +200,11 @@ public class TemplateGenerator {
 			Ex exam = (Ex) t.get(0);
 			final int intNum = exam.dataInt().length; // 2
 			final int stringNum = exam.dataString().length; // 1
-
+            final int douNum = exam.dataDou().length;
+            final int floNum = exam.dataFlo().length;
+            final int charNum = exam.dataChar().length;
+			
+			
 			for (int i = examNum; i < testNum; i++) {
 				Ex exTemp = new Ex() {
 
@@ -240,19 +246,43 @@ public class TemplateGenerator {
 					@Override
 					public float[] dataFlo() {
 						// TODO Auto-generated method stub
-						return null;
+						List<Float> nlist = new ArrayList<Float>();
+						for (int k = 0; k < intNum; k++) {
+							nlist.add((float) (Math.random() * 50) + 1);
+						}
+
+						Float[] floats = nlist.toArray(new Float[nlist
+								.size()]);
+						float[] primitives = ArrayUtils.toPrimitive(floats);
+
+						return primitives;
 					}
 
 					@Override
 					public double[] dataDou() {
 						// TODO Auto-generated method stub
-						return null;
+						List<Double> nlist = new ArrayList<Double>();
+						for (int k = 0; k < intNum; k++) {
+							nlist.add((double)((Math.random() * 50) + 1));
+						}
+
+						Double[] doubles = nlist.toArray(new Double[nlist
+								.size()]);
+						double[] primitives = ArrayUtils.toPrimitive(doubles);
+
+						return primitives;
 					}
 
 					@Override
 					public char[] dataChar() {
 						// TODO Auto-generated method stub
-						return null;
+						char[] s = { 'a', 'b', 'c', 'd' };
+						char slist[] = new char[charNum];
+						for (int b = 0; b < charNum; b++) {
+							slist[b] = s[b];
+						}
+//						
+						return slist;
 					}
 				};
 				t.add(exTemp);

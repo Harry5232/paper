@@ -1,10 +1,18 @@
 import spock.lang.*
 import com.test.t.*
 import com.test.t3.Scores
-
-class JavaSpec extends Specification {
+#macro( r $txt $maxlen )
+  #set($t = $txt.toString())
+  #set($txtlen = $t.length())
+  #set($num = $maxlen - $txtlen+1)#foreach( $value in [1..$num] ) #end
+#end
+  
+ class JavaSpec extends Specification {
  #foreach ($method in ${methods}) ${newline}
- //"${method.get("type")}" type
+ #set($maxlen = 0) #set($templen = 0) #set($s = "")  #set($a = "a")
+ #foreach($item in ${method.get("result")})#foreach($num in ${item[0]})#set($s = $num.toString())#set($templen = $s.length())#if($templen > $maxlen)#set($maxlen = $templen)#end#end#end
+
+ //"${method.get("type")}" type   
  @Scores(points=${method.get("score")}f)
  @Unroll
  def "${method.get("methodName")}"() {
@@ -21,24 +29,22 @@ class JavaSpec extends Specification {
       ob.${method.get("methodName")}(a,b,c,d) == e
       #elseif(${method.get("numPara")} == 5)
       ob.${method.get("methodName")}(a,b,c,d,e) == f
-      #end
-       
-    where:
+      #end  
+    where:   
       #if(${method.get("numPara")} == 1)
-        a || c
+        a#r(${a}${maxlen})||  c
       #elseif(${method.get("numPara")} == 2)
-        a | b || c
+        a#r(${a}${maxlen})| b#r(${a}${maxlen})||  c
       #elseif(${method.get("numPara")} == 3)
-        a | b | c || d
+        a#r(${a}${maxlen})| b#r(${a}${maxlen})| c#r(${a}${maxlen})||  d
       #elseif(${method.get("numPara")} == 4)
-        a | b | c | d || e
+        a#r(${a}${maxlen})| b#r(${a}${maxlen})| c#r(${a}${maxlen})| d#r(${a}${maxlen})||  e
       #elseif(${method.get("numPara")} == 5)
-        a | b | c | d | e || f  
+        a#r(${a}${maxlen})| b#r(${a}${maxlen})| c#r(${a}${maxlen})| d#r(${a}${maxlen})| e#r(${a}${maxlen})||  f  
       #end
-   	  #foreach($item in ${method.get("result")})#foreach($num in ${item[0]})#if(${num.getClass().getName().toString()} == "java.lang.String")"${num}"#else${num}#end#if($foreach.hasNext)| #end#end|| #if(${method.get("parReturn")} == "String")"${item[1]}"#elseif(${method.get("parReturn")} != "String")(${method.get("parReturn")})${item[1]}#else${item[1]}#end${newline}              #end       
+   	  #foreach($item in ${method.get("result")})#foreach($num in ${item[0]})#if(${num.getClass().getName().toString()} == "java.lang.String")"${num}"#r(${num}${maxlen})#else${num}#r(${num}${maxlen})#end#if($foreach.hasNext)| #end#end|| #if(${method.get("parReturn")} == "String")"${item[1]}"#elseif(${method.get("parReturn")} != "String")(${method.get("parReturn")})${item[1]}#else${item[1]}#end${newline}              #end       
    	     
   }
 #end
- 
- 
+
 }
