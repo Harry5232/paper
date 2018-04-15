@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JavaSpec" tests="24" skipped="0" failures="1" errors="0" timestamp="2018-04-11T12:38:41" hostname="harry" time="0.277">
+<testsuite name="JavaSpec" tests="8" skipped="0" failures="2" errors="0" timestamp="2018-04-13T08:59:34" hostname="harry" time="0.285">
   <properties/>
-  <testcase name="integrationOfSquare[0]" classname="JavaSpec" time="0.042"/>
-  <testcase name="integrationOfSquare[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="integrationOfSquare[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="reverse[0]" classname="JavaSpec" time="0.0"/>
-  <testcase name="reverse[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="reverse[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="isArmstrongNumber[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="isArmstrongNumber[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="isArmstrongNumber[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="findAllArmstrongNumbers[0]" classname="JavaSpec" time="0.0"/>
-  <testcase name="findAllArmstrongNumbers[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="findAllArmstrongNumbers[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numOfFactors[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numOfFactors[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numOfFactors[2]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfBitOne[0]" classname="JavaSpec" time="0.002"/>
-  <testcase name="numberOfBitOne[1]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfBitOne[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="diamond[0]" classname="JavaSpec" time="0.195">
-    <failure message="Condition not satisfied:&#10;&#10;ob.diamond(a) == c&#10;|  |       |  |  |&#10;|  |       4  |  ---4---&#10;|  |          |  --33--&#10;|  |          |  -22222-&#10;|  |          |  1111111&#10;|  |          |  -22222-&#10;|  |          |  --333--&#10;|  |          |  ---4---&#10;|  |          false&#10;|  |          1 difference (98% similarity)&#10;|  |          ---4---\n--33(3)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  |          ---4---\n--33(-)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  ---4---&#10;|  --333--&#10;|  -22222-&#10;|  1111111&#10;|  -22222-&#10;|  --333--&#10;|  ---4---&#10;com.test.t.HW1Solution@1d7b493a&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+  <testcase name="integrationOfSquare" classname="JavaSpec" time="0.088"/>
+  <testcase name="reverse" classname="JavaSpec" time="0.167">
+    <failure message="Condition not satisfied:&#10;&#10;ob.reverse(a) == c&#10;|  |       |  |  |&#10;|  2       20 |  20&#10;|             false&#10;com.test.t.HW1Solution@1d7b493a&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+ob.reverse(a) == c
+|  |       |  |  |
+|  2       20 |  20
+|             false
+com.test.t.HW1Solution@1d7b493a
+
+	at JavaSpec.reverse(JavaSpec.groovy:35)
+</failure>
+  </testcase>
+  <testcase name="findAllArmstrongNumbers" classname="JavaSpec" time="0.003"/>
+  <testcase name="isArmstrongNumber" classname="JavaSpec" time="0.005"/>
+  <testcase name="diamond" classname="JavaSpec" time="0.009">
+    <failure message="Condition not satisfied:&#10;&#10;ob.diamond(a) == c&#10;|  |       |  |  |&#10;|  |       4  |  ---4---&#10;|  |          |  --0333--&#10;|  |          |  -22222-&#10;|  |          |  1111111&#10;|  |          |  -22222-&#10;|  |          |  --333--&#10;|  |          |  ---4---&#10;|  |          false&#10;|  |          1 difference (98% similarity)&#10;|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  ---4---&#10;|  --333--&#10;|  -22222-&#10;|  1111111&#10;|  -22222-&#10;|  --333--&#10;|  ---4---&#10;com.test.t.HW1Solution@8e482c2&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
 
 ob.diamond(a) == c
 |  |       |  |  |
 |  |       4  |  ---4---
-|  |          |  --33--
+|  |          |  --0333--
 |  |          |  -22222-
 |  |          |  1111111
 |  |          |  -22222-
@@ -33,8 +30,8 @@ ob.diamond(a) == c
 |  |          |  ---4---
 |  |          false
 |  |          1 difference (98% similarity)
-|  |          ---4---\n--33(3)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
-|  |          ---4---\n--33(-)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
 |  ---4---
 |  --333--
 |  -22222-
@@ -42,16 +39,14 @@ ob.diamond(a) == c
 |  -22222-
 |  --333--
 |  ---4---
-com.test.t.HW1Solution@1d7b493a
+com.test.t.HW1Solution@8e482c2
 
-	at JavaSpec.diamond(JavaSpec.groovy:123)
+	at JavaSpec.diamond(JavaSpec.groovy:94)
 </failure>
   </testcase>
-  <testcase name="diamond[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="diamond[2]" classname="JavaSpec" time="0.0"/>
-  <testcase name="numberOfBitChanges[0]" classname="JavaSpec" time="0.001"/>
-  <testcase name="numberOfBitChanges[1]" classname="JavaSpec" time="0.0"/>
-  <testcase name="numberOfBitChanges[2]" classname="JavaSpec" time="0.001"/>
+  <testcase name="numOfFactors" classname="JavaSpec" time="0.002"/>
+  <testcase name="numberOfBitOne" classname="JavaSpec" time="0.001"/>
+  <testcase name="numberOfBitChanges" classname="JavaSpec" time="0.007"/>
   <system-out><![CDATA[2.0
 ***********
 7.0
@@ -62,14 +57,14 @@ com.test.t.HW1Solution@1d7b493a
 ***********
 5.0
 ***********
-9.0
-***********
 5.0
+***********
+9.0
 ***********
 4.0
 ***********
 ]]></system-out>
-  <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
-[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
+  <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
+[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
 ]]></system-err>
 </testsuite>

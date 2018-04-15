@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">24</div>
+<div class="counter">8</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.251s</div>
+<div class="counter">0.282s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">95%</div>
+<div class="percent">75%</div>
 <p>successful</p>
 </div>
 </td>
@@ -76,15 +76,15 @@
 <div id="tab0" class="tab">
 <h2>Failed tests</h2>
 <div class="test">
-<a name="diamond[0]"></a>
-<h3 class="failures">diamond[0]</h3>
+<a name="diamond"></a>
+<h3 class="failures">diamond</h3>
 <span class="code">
 <pre>Condition not satisfied:
 
 ob.diamond(a) == c
 |  |       |  |  |
 |  |       4  |  ---4---
-|  |          |  --33--
+|  |          |  --0333--
 |  |          |  -22222-
 |  |          |  1111111
 |  |          |  -22222-
@@ -92,8 +92,8 @@ ob.diamond(a) == c
 |  |          |  ---4---
 |  |          false
 |  |          1 difference (98% similarity)
-|  |          ---4---\n--33(3)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
-|  |          ---4---\n--33(-)--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
+|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
 |  ---4---
 |  --333--
 |  -22222-
@@ -101,9 +101,25 @@ ob.diamond(a) == c
 |  -22222-
 |  --333--
 |  ---4---
+com.test.t.HW1Solution@8e482c2
+
+	at JavaSpec.diamond(JavaSpec.groovy:94)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="reverse"></a>
+<h3 class="failures">reverse</h3>
+<span class="code">
+<pre>Condition not satisfied:
+
+ob.reverse(a) == c
+|  |       |  |  |
+|  2       20 |  20
+|             false
 com.test.t.HW1Solution@1d7b493a
 
-	at JavaSpec.diamond(JavaSpec.groovy:123)
+	at JavaSpec.reverse(JavaSpec.groovy:35)
 </pre>
 </span>
 </div>
@@ -119,124 +135,44 @@ com.test.t.HW1Solution@1d7b493a
 </tr>
 </thead>
 <tr>
-<td class="failures">diamond[0]</td>
-<td>0.195s</td>
+<td class="failures">diamond</td>
+<td>0.009s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="success">diamond[1]</td>
-<td>0s</td>
+<td class="success">findAllArmstrongNumbers</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">diamond[2]</td>
-<td>0s</td>
+<td class="success">integrationOfSquare</td>
+<td>0.088s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">findAllArmstrongNumbers[0]</td>
-<td>0s</td>
+<td class="success">isArmstrongNumber</td>
+<td>0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">findAllArmstrongNumbers[1]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">findAllArmstrongNumbers[2]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">integrationOfSquare[0]</td>
-<td>0.042s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">integrationOfSquare[1]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">integrationOfSquare[2]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isArmstrongNumber[0]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isArmstrongNumber[1]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isArmstrongNumber[2]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numOfFactors[0]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numOfFactors[1]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numOfFactors[2]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numberOfBitChanges[0]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numberOfBitChanges[1]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numberOfBitChanges[2]</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">numberOfBitOne[0]</td>
+<td class="success">numOfFactors</td>
 <td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">numberOfBitOne[1]</td>
+<td class="success">numberOfBitChanges</td>
+<td>0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">numberOfBitOne</td>
 <td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">numberOfBitOne[2]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">reverse[0]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">reverse[1]</td>
-<td>0s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">reverse[2]</td>
-<td>0s</td>
-<td class="success">passed</td>
+<td class="failures">reverse</td>
+<td>0.167s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
@@ -253,9 +189,9 @@ com.test.t.HW1Solution@1d7b493a
 ***********
 5.0
 ***********
-9.0
-***********
 5.0
+***********
+9.0
 ***********
 4.0
 ***********
@@ -265,8 +201,8 @@ com.test.t.HW1Solution@1d7b493a
 <div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
-[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.template.TemplateReportCreator, com.athaydes.spockframework.report.outputDir=test report222, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template2.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template2.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
+<pre>[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
+[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=false, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
 </pre>
 </span>
 </div>
@@ -278,7 +214,7 @@ com.test.t.HW1Solution@1d7b493a
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/4/11 下午 08:38:43</p>
+<a href="http://www.gradle.org">Gradle 4.3.1</a> at 2018/4/13 下午 04:59:35</p>
 </div>
 </div>
 </body>

@@ -1,0 +1,1 @@
+{"JavaSpec":{"executedFeatures":["diamond","findAllArmstrongNumbers","integrationOfSquare","isArmstrongNumber","numOfFactors","numberOfBitChanges","numberOfBitOne","reverse"],"ignoredFeatures":[],"stats":{"failures":0,"errors":0,"skipped":0,"totalRuns":26,"successRate":1.0,"time":614,"grades":41.63,"successRate2":1.0}}}

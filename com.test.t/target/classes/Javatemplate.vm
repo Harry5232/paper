@@ -14,7 +14,7 @@ import com.test.t3.Scores
 
  //"${method.get("type")}" type   
  @Scores(points=${method.get("score")}f)
- @Unroll
+ //@Unroll
  def "${method.get("methodName")}"() {
     setup:
             ${method.get("className")} ob = new ${method.get("className")}();
@@ -29,7 +29,8 @@ import com.test.t3.Scores
       ob.${method.get("methodName")}(a,b,c,d) == e
       #elseif(${method.get("numPara")} == 5)
       ob.${method.get("methodName")}(a,b,c,d,e) == f
-      #end  
+      #end
+      
     where:   
       #if(${method.get("numPara")} == 1)
         a#r(${a}${maxlen})||  c

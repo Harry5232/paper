@@ -1,0 +1,6 @@
+[0413/131010.404:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: 存取被拒。 (0x5)
+[0413/131010.407:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: 管道已結束。 (0x6D)
+[0413/131010.407:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: 存取被拒。 (0x5)
+[0413/131333.046:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: 存取被拒。 (0x5)
+[0413/131333.053:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: 管道已結束。 (0x6D)
+[0413/131333.054:ERROR:file_io_win.cc(179)] CreateFile C:\Program Files (x86)\settings.dat: 存取被拒。 (0x5)
