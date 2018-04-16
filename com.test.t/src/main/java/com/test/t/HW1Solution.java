@@ -7,7 +7,8 @@ import com.test.t.Grade.Type;
 import static java.lang.System.out;
 
 public class HW1Solution {
-
+	
+	
 	/**
 	 * count the number of all factors k of a number n which are located in an
 	 * interval [s,e]. For example, if n is 100 and [s,e] = [10,30], then the
@@ -23,22 +24,24 @@ public class HW1Solution {
 	 *            a non-negative integer >= s.
 	 * @return the number of factors of n located in [s,e].
 	 */
+	
+	 
 	@Grade(value = 5, type = Type.DIFFICULT)
 	@Validate(number = 3, ex = { @Ex(dataInt = { 10, 20, 20 })})  //, @Ex(dataInt = { 45, 60, 20 }), @Ex(dataInt = { 70, 80, 20 }) 
 	public static int numOfFactors(int n, int s, int e) {
 		// TO-DO: place your code here!
 		// return -1;
-
+		//hwstart 
 		int rlt = 0;
 		for (int k = s; k <= e; k++) {
 			if (n % k == 0)
 				rlt++;
 		}
-
+		
 		return rlt;
-
+		//hwend
 	}
-
+	
 	/**
 	 * return the reversal of an int number. Ex: if n = 230400, then the result
 	 * should be 4032 instead of 004032 (Leading 0's should be stripped). Note:
@@ -53,7 +56,8 @@ public class HW1Solution {
 			 }) //@Ex(dataInt = { 45 }), @Ex(dataInt = { 70 })
 	public static int reverse(int n) {
 		// TO-DO: put your code here!
-		// return 0 ;
+		
+		//hwstart
 		int rlt = 0;
 		while (n > 0) {
 			int rem = n % 10;
@@ -61,7 +65,7 @@ public class HW1Solution {
 			n = n / 10;
 		}
 		return rlt;
-
+		//hwend
 	}
 
 	/**
@@ -78,7 +82,8 @@ public class HW1Solution {
 			@Ex(dataInt = { 60 }), @Ex(dataInt = { 80 }) })
 	public static boolean isArmstrongNumber(int n) {
 		// TO-DO:put your code here!
-		// return false;
+		//hwstart
+		
 		int m = n;
 		int rlt = 0;
 		while (m > 0) {
@@ -89,6 +94,7 @@ public class HW1Solution {
 			m = m / 10;
 		}
 		return rlt == n;
+		//hwend
 
 	}
 
@@ -109,7 +115,7 @@ public class HW1Solution {
 	public static String findAllArmstrongNumbers(int start, int end) {
 		// TO-DO: Put your code here!
 		// You can call the method isAmstrongNumber(.) in the body
-		// return "";
+		//hwstart
 		String rlt = "";
 
 		for (int k = start; k <= end; k++) {
@@ -119,7 +125,7 @@ public class HW1Solution {
 		}
 
 		return rlt;
-
+		//hwend
 	}
 
 	
@@ -147,7 +153,7 @@ public class HW1Solution {
 	public static double integrationOfSquare(double start, double end,
 			int nSamples) {
 		// TO-DO: put your code here!
-		// return 0.0;
+		//hwstart
 		double sum = 0;
 		final double d = (end - start) / (nSamples - 1);
 		double x = start;
@@ -156,7 +162,7 @@ public class HW1Solution {
 			x += d;
 		}
 		return sum * d;
-
+		//hwend
 	}
 	
 
@@ -176,7 +182,7 @@ public class HW1Solution {
 			@Ex(dataInt = { 60}), @Ex(dataInt = { 80}) })
 	public static int numberOfBitOne(int n) {
 		// put your code here!
-		// return -1;
+		//hwstart
 		int rlt = 0;
 		for (int k = 0; k < 32; k++) {
 			if (n % 2 != 0)
@@ -184,7 +190,7 @@ public class HW1Solution {
 			n >>>= 1;
 		}
 		return rlt;
-
+		//hwend
 	}
 
 	
@@ -207,7 +213,7 @@ public class HW1Solution {
 			@Ex(dataInt = { 35}), @Ex(dataInt = { 8}) })
 	public static int numberOfBitChanges(int n) {
 		// put your code here!
-		// return - 1;
+		//hwstart
 
 		int rlt = 0;
 		boolean bit0 = (n % 2 != 0);
@@ -222,7 +228,7 @@ public class HW1Solution {
 
 		}
 		return rlt;
-
+		//hwend
 	}
 
 	
@@ -306,7 +312,7 @@ public class HW1Solution {
 	
 	public static String diamond(int n) {
 		// place your code here!
-		// return "XXXX";
+		//hwstart
 		
 		String rlt = "" ;
 		
@@ -319,6 +325,7 @@ public class HW1Solution {
 		}
 		
 		return rlt;
+		//hwend
 	}
 	
 	
