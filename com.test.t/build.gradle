@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 
 description = """"""
 
-mainClassName = "com.test.t.StrProcess"
+mainClassName = "com.test.t.TemplateGenerator"
 
 sourceCompatibility = 1.6
 targetCompatibility = 1.6
@@ -27,6 +27,14 @@ dependencies {
 	compile files('spock-reports-master-1.4.0.jar')
 	compile files('spock-reports-master-1.4.0-javadoc.jar')
 	compile files('spock-reports-master-1.4.0-sources.jar')
+	
+	compile files('commons-beanutils-1.9.3.jar')
+	compile files('commons-collections-3.2.2.jar')
+	compile files('commons-lang3-3.6.jar')
+	compile files('commons-logging-1.2.jar')
+	compile files('commons-text-1.1.jar')
+	compile files('opencsv-4.0.jar')
+	
 	
 	compile group: 'org.apache.velocity', name: 'velocity', version:'1.7'
 	compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.10'

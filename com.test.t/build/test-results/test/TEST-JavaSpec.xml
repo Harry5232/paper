@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JavaSpec" tests="8" skipped="0" failures="2" errors="0" timestamp="2018-04-15T15:28:50" hostname="harry" time="0.275">
+<testsuite name="JavaSpec" tests="9" skipped="0" failures="1" errors="0" timestamp="2018-04-17T05:27:49" hostname="harry" time="0.297">
   <properties/>
-  <testcase name="integrationOfSquare" classname="JavaSpec" time="0.076"/>
-  <testcase name="reverse" classname="JavaSpec" time="0.152">
-    <failure message="Condition not satisfied:&#10;&#10;ob.reverse(a) == c&#10;|  |       |  |  |&#10;|  2       20 |  20&#10;|             false&#10;com.test.t.HW1Solution@1d7b493a&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+  <testcase name="isArmstrongNumber22" classname="JavaSpec" time="0.239">
+    <failure message="Condition failed with Exception:&#10;&#10;ob.isArmstrongNumber(a) == c&#10;|&#10;groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec&#10;" type="org.spockframework.runtime.ConditionFailedWithExceptionError">Condition failed with Exception:
 
-ob.reverse(a) == c
-|  |       |  |  |
-|  2       20 |  20
-|             false
-com.test.t.HW1Solution@1d7b493a
+ob.isArmstrongNumber(a) == c
+|
+groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
 
-	at JavaSpec.reverse(JavaSpec.groovy:35)
+	at JavaSpec.isArmstrongNumber22(JavaSpec.groovy:17)
+Caused by: groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
+	... 1 more
+</failure>
+    <failure message="Condition failed with Exception:&#10;&#10;ob.isArmstrongNumber(a) == c&#10;|&#10;groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec&#10;" type="org.spockframework.runtime.ConditionFailedWithExceptionError">Condition failed with Exception:
+
+ob.isArmstrongNumber(a) == c
+|
+groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
+
+	at JavaSpec.isArmstrongNumber22(JavaSpec.groovy:17)
+Caused by: groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
+	... 1 more
+</failure>
+    <failure message="Condition failed with Exception:&#10;&#10;ob.isArmstrongNumber(a) == c&#10;|&#10;groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec&#10;" type="org.spockframework.runtime.ConditionFailedWithExceptionError">Condition failed with Exception:
+
+ob.isArmstrongNumber(a) == c
+|
+groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
+
+	at JavaSpec.isArmstrongNumber22(JavaSpec.groovy:17)
+Caused by: groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec
+	... 1 more
 </failure>
   </testcase>
-  <testcase name="findAllArmstrongNumbers" classname="JavaSpec" time="0.004"/>
-  <testcase name="isArmstrongNumber" classname="JavaSpec" time="0.005"/>
-  <testcase name="diamond" classname="JavaSpec" time="0.017">
-    <failure message="Condition not satisfied:&#10;&#10;ob.diamond(a) == c&#10;|  |       |  |  |&#10;|  |       4  |  ---4---&#10;|  |          |  --0333--&#10;|  |          |  -22222-&#10;|  |          |  1111111&#10;|  |          |  -22222-&#10;|  |          |  --333--&#10;|  |          |  ---4---&#10;|  |          false&#10;|  |          1 difference (98% similarity)&#10;|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n&#10;|  ---4---&#10;|  --333--&#10;|  -22222-&#10;|  1111111&#10;|  -22222-&#10;|  --333--&#10;|  ---4---&#10;com.test.t.HW1Solution@8e482c2&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
-
-ob.diamond(a) == c
-|  |       |  |  |
-|  |       4  |  ---4---
-|  |          |  --0333--
-|  |          |  -22222-
-|  |          |  1111111
-|  |          |  -22222-
-|  |          |  --333--
-|  |          |  ---4---
-|  |          false
-|  |          1 difference (98% similarity)
-|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
-|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n
-|  ---4---
-|  --333--
-|  -22222-
-|  1111111
-|  -22222-
-|  --333--
-|  ---4---
-com.test.t.HW1Solution@8e482c2
-
-	at JavaSpec.diamond(JavaSpec.groovy:94)
-</failure>
-  </testcase>
-  <testcase name="numOfFactors" classname="JavaSpec" time="0.007"/>
+  <testcase name="isArmstrongNumber" classname="JavaSpec" time="0.033"/>
+  <testcase name="reverse" classname="JavaSpec" time="0.004"/>
+  <testcase name="diamond" classname="JavaSpec" time="0.002"/>
   <testcase name="numberOfBitOne" classname="JavaSpec" time="0.005"/>
-  <testcase name="numberOfBitChanges" classname="JavaSpec" time="0.002"/>
+  <testcase name="numOfFactors" classname="JavaSpec" time="0.003"/>
+  <testcase name="integrationOfSquare" classname="JavaSpec" time="0.004"/>
+  <testcase name="numberOfBitChanges" classname="JavaSpec" time="0.001"/>
+  <testcase name="findAllArmstrongNumbers" classname="JavaSpec" time="0.001"/>
   <system-out><![CDATA[2.0
 ***********
+2.0
+***********
 7.0
-***********
-2.0
-***********
-2.0
-***********
-5.0
 ***********
 5.0
 ***********
 9.0
 ***********
+5.0
+***********
+2.0
+***********
 4.0
 ***********
+2.0
+***********
+[[1, 2, 1], [3, 4, 1], [6, 8, 1]]
+[[1, 2, 1], [3, 4, 1], [6, 8, 1]]
+[[1, 2, 1], [3, 4, 1], [6, 8, 1]]
 ]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}
 [Test worker] INFO com.athaydes.spockframework.report.internal.ConfigLoader - SpockReports config loaded: {com.athaydes.spockframework.report.showCodeBlocks=true, com.athaydes.spockframework.report.template.TemplateReportCreator.reportFileExtension=md, com.athaydes.spockframework.report.testSourceRoots=src/test/groovy, com.athaydes.spockframework.report.IReportCreator=com.athaydes.spockframework.report.internal.HtmlReportCreator, com.athaydes.spockframework.report.outputDir=spock-reports, com.athaydes.spockframework.report.internal.HtmlReportCreator.inlineCss=true, com.athaydes.spockframework.report.internal.HtmlReportCreator.featureReportCss=spock-feature-report.css, com.athaydes.spockframework.report.hideEmptyBlocks=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.summaryReportCss=spock-summary-report.css, com.athaydes.spockframework.report.projectVersion=Unknown, com.athaydes.spockframework.report.template.TemplateReportCreator.specTemplateFile=/templateReportCreator/spec-template.md, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryTemplateFile=/templateReportCreator/summary-template.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.excludeToc=false, com.athaydes.spockframework.report.template.TemplateReportCreator.enabled=true, com.athaydes.spockframework.report.projectName=, com.athaydes.spockframework.report.template.TemplateReportCreator.summaryFileName=summary.md, com.athaydes.spockframework.report.internal.HtmlReportCreator.printThrowableStackTrace=false, com.athaydes.spockframework.report.internal.HtmlReportCreator.enabled=true}

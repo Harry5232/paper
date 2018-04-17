@@ -64,7 +64,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/com.test.t-0.0.1-SNAPSHOT.jar:$APP_HOME/lib/velocity-1.7.jar:$APP_HOME/lib/spock-core-1.1-groovy-2.4.jar:$APP_HOME/lib/groovy-all-2.4.10.jar:$APP_HOME/lib/h2-1.4.185.jar:$APP_HOME/lib/javax.mail-1.6.0.jar:$APP_HOME/lib/commons-collections-3.2.1.jar:$APP_HOME/lib/commons-lang-2.4.jar:$APP_HOME/lib/activation-1.1.jar:$APP_HOME/lib/junit-4.12.jar:$APP_HOME/lib/hamcrest-core-1.3.jar
+CLASSPATH=$APP_HOME/lib/com.test.t-0.0.1-SNAPSHOT.jar:$APP_HOME/lib/spock-core-1.1-groovy-2.4.jar:$APP_HOME/lib/junit-4.12.jar:$APP_HOME/lib/spock-reports-master-1.4.0.jar:$APP_HOME/lib/spock-reports-master-1.4.0-javadoc.jar:$APP_HOME/lib/spock-reports-master-1.4.0-sources.jar:$APP_HOME/lib/commons-beanutils-1.9.3.jar:$APP_HOME/lib/commons-collections-3.2.2.jar:$APP_HOME/lib/commons-lang3-3.6.jar:$APP_HOME/lib/commons-logging-1.2.jar:$APP_HOME/lib/commons-text-1.1.jar:$APP_HOME/lib/opencsv-4.0.jar:$APP_HOME/lib/velocity-1.7.jar:$APP_HOME/lib/groovy-all-2.4.10.jar:$APP_HOME/lib/h2-1.4.185.jar:$APP_HOME/lib/javax.mail-1.6.0.jar:$APP_HOME/lib/commons-collections-3.2.1.jar:$APP_HOME/lib/commons-lang-2.4.jar:$APP_HOME/lib/activation-1.1.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

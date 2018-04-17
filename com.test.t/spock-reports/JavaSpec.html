@@ -244,7 +244,7 @@ div.footer {
 <hr></hr>
 <div class='summary-report'>
 <h3>Summary:</h3>
-<div class='date-test-ran'>Created on Sun Apr 15 23:28:51 CST 2018 by Harry</div>
+<div class='date-test-ran'>Created on Tue Apr 17 13:27:50 CST 2018 by Harry</div>
 <table class='summary-table'>
 <thead>
 <th>Executed features</th>
@@ -257,13 +257,13 @@ div.footer {
 </thead>
 <tbody>
 <tr>
-<td>8</td>
-<td>2</td>
+<td>9</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>75.0%</td>
-<td>1.098 seconds</td>
-<td>30.91</td>
+<td>88.89%</td>
+<td>1.430 seconds</td>
+<td>40.7</td>
 </tr>
 </tbody>
 </table>
@@ -277,34 +277,37 @@ div.footer {
 <tbody>
 <ul id='toc'>
 <li>
-<a href='#1587354568' class='feature-toc-pass'>integrationOfSquare</a>
-</li>
-<li>
-<a href='#1099846370' class='feature-toc-failure'>reverse</a>
-</li>
-<li>
-<a href='#-1942381537' class='feature-toc-pass'>findAllArmstrongNumbers</a>
+<a href='#-1850500014' class='feature-toc-failure'>isArmstrongNumber22</a>
 </li>
 <li>
 <a href='#-748293486' class='feature-toc-pass'>isArmstrongNumber</a>
 </li>
 <li>
-<a href='#1655054676' class='feature-toc-failure'>diamond</a>
+<a href='#1099846370' class='feature-toc-pass'>reverse</a>
 </li>
 <li>
-<a href='#-1525033401' class='feature-toc-pass'>numOfFactors</a>
+<a href='#1655054676' class='feature-toc-pass'>diamond</a>
 </li>
 <li>
 <a href='#1437033785' class='feature-toc-pass'>numberOfBitOne</a>
 </li>
 <li>
+<a href='#-1525033401' class='feature-toc-pass'>numOfFactors</a>
+</li>
+<li>
+<a href='#1587354568' class='feature-toc-pass'>integrationOfSquare</a>
+</li>
+<li>
 <a href='#931362838' class='feature-toc-pass'>numberOfBitChanges</a>
+</li>
+<li>
+<a href='#-1942381537' class='feature-toc-pass'>findAllArmstrongNumbers</a>
 </li>
 </ul>
 <tr>
 <td colspan='10'>
-<div class='feature-description' id='1587354568'>
-<span>integrationOfSquare</span>
+<div class='feature-description failure' id='-1850500014'>
+<span>isArmstrongNumber22</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
 </span>
@@ -316,7 +319,8 @@ div.footer {
 <div class='block-kind'>Given:</div>
 </td>
 <td>
-<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+<pre class='block-source pre-error'>CSVReader reader = new CSVReader(new FileReader("t.csv"))
+println(reader.readAll())</pre>
 </td>
 </tr>
 <tr>
@@ -324,76 +328,7 @@ div.footer {
 <div class='block-kind'>Expect:</div>
 </td>
 <td>
-<pre class='block-source'>ob.integrationOfSquare(a,b,c) == d</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>a</th>
-<th class='ex-header'>b</th>
-<th class='ex-header'>c</th>
-<th class='ex-header'>d</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>20.0</td>
-<td class='ex-value'>35.0</td>
-<td class='ex-value'>10</td>
-<td class='ex-value'>12986.111111111117</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>60.0</td>
-<td class='ex-value'>35.0</td>
-<td class='ex-value'>10</td>
-<td class='ex-value'>-64441.87242798354</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>80.0</td>
-<td class='ex-value'>35.0</td>
-<td class='ex-value'>10</td>
-<td class='ex-value'>-175625.0</td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-<td>
-<div class='spec-status'>3/3 passed</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description failure' id='1099846370'>
-<span>reverse</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<pre class='block-source pre-error'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Expect:</div>
-</td>
-<td>
-<pre class='block-source error'>ob.reverse(a) == c // line 35</pre>
+<pre class='block-source error'>ob.isArmstrongNumber(a) == c // line 17</pre>
 </td>
 </tr>
 <tr>
@@ -408,37 +343,27 @@ div.footer {
 <th class='ex-header'>c</th>
 </thead>
 <tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>10</td>
-<td class='ex-value'>1</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>3</td>
-<td class='ex-value'>3</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>36</td>
-<td class='ex-value'>63</td>
-<td class='ex-result'>OK</td>
-</tr>
 <tr class='ex-fail'>
 <td class='ex-value'>20</td>
-<td class='ex-value'>20</td>
+<td class='ex-value'>false</td>
 <td class='ex-result'>FAIL</td>
 </tr>
-<tr class='ex-pass'>
-<td class='ex-value'>50</td>
-<td class='ex-value'>5</td>
-<td class='ex-result'>OK</td>
+<tr class='ex-fail'>
+<td class='ex-value'>60</td>
+<td class='ex-value'>false</td>
+<td class='ex-result'>FAIL</td>
+</tr>
+<tr class='ex-fail'>
+<td class='ex-value'>80</td>
+<td class='ex-value'>false</td>
+<td class='ex-result'>FAIL</td>
 </tr>
 </tbody>
 </table>
 </div>
 </td>
 <td>
-<div class='spec-status'>4/5 passed</div>
+<div class='spec-status'>0/3 passed</div>
 </td>
 </tr>
 <tr>
@@ -448,81 +373,36 @@ div.footer {
 <div class='problem-list'>
 <ul>
 <li>
-<div>[20, 20]</div>
+<div>[20, false]</div>
 <ul>
 <li>
-<pre>Condition not satisfied:<br/><br/>ob.reverse(a) == c<br/>|  |       |  |  |<br/>|  2       20 |  20<br/>|             false<br/>com.test.t.HW1Solution@1d7b493a<br/></pre>
+<pre>Condition failed with Exception:<br/><br/>ob.isArmstrongNumber(a) == c<br/>|<br/>groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec<br/></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<div>[60, false]</div>
+<ul>
+<li>
+<pre>Condition failed with Exception:<br/><br/>ob.isArmstrongNumber(a) == c<br/>|<br/>groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec<br/></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<div>[80, false]</div>
+<ul>
+<li>
+<pre>Condition failed with Exception:<br/><br/>ob.isArmstrongNumber(a) == c<br/>|<br/>groovy.lang.MissingPropertyException: No such property: ob for class: JavaSpec<br/></pre>
 </li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='-1942381537'>
-<span>findAllArmstrongNumbers</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Expect:</div>
-</td>
-<td>
-<pre class='block-source'>ob.findAllArmstrongNumbers(a,b) == c</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>a</th>
-<th class='ex-header'>b</th>
-<th class='ex-header'>c</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>200</td>
-<td class='ex-value'>400</td>
-<td class='ex-value'>370,371</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>100</td>
-<td class='ex-value'>999</td>
-<td class='ex-value'>153,370,371,407</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>80</td>
-<td class='ex-value'>35</td>
-<td class='ex-value'></td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-<td>
-<div class='spec-status'>3/3 passed</div>
 </td>
 </tr>
 <tr>
@@ -588,8 +468,8 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
-<div class='feature-description failure' id='1655054676'>
-<span>diamond</span>
+<div class='feature-description' id='1099846370'>
+<span>reverse</span>
 <span style='float: right; font-size: 60%;'>
 <a href='#toc'>Return</a>
 </span>
@@ -601,7 +481,7 @@ div.footer {
 <div class='block-kind'>Given:</div>
 </td>
 <td>
-<pre class='block-source pre-error'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
 </td>
 </tr>
 <tr>
@@ -609,7 +489,7 @@ div.footer {
 <div class='block-kind'>Expect:</div>
 </td>
 <td>
-<pre class='block-source error'>ob.diamond(a) == c // line 94</pre>
+<pre class='block-source'>ob.reverse(a) == c</pre>
 </td>
 </tr>
 <tr>
@@ -624,17 +504,88 @@ div.footer {
 <th class='ex-header'>c</th>
 </thead>
 <tbody>
-<tr class='ex-fail'>
+<tr class='ex-pass'>
+<td class='ex-value'>10</td>
+<td class='ex-value'>1</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>46</td>
+<td class='ex-value'>64</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>36</td>
+<td class='ex-value'>63</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>32</td>
+<td class='ex-value'>23</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>18</td>
+<td class='ex-value'>81</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>5/5 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1655054676'>
+<span>diamond</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<pre class='block-source'>ob.diamond(a) == c</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>a</th>
+<th class='ex-header'>c</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
 <td class='ex-value'>4</td>
 <td class='ex-value'>---4---
---0333--
+--333--
 -22222-
 1111111
 -22222-
 --333--
 ---4---
 </td>
-<td class='ex-result'>FAIL</td>
+<td class='ex-result'>OK</td>
 </tr>
 <tr class='ex-pass'>
 <td class='ex-value'>3</td>
@@ -660,101 +611,6 @@ div.footer {
 ----555----
 -----6-----
 </td>
-<td class='ex-result'>OK</td>
-</tr>
-</tbody>
-</table>
-</div>
-</td>
-<td>
-<div class='spec-status'>2/3 passed</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='problem-description'>
-<div class='problem-header'>The following problems occurred:</div>
-<div class='problem-list'>
-<ul>
-<li>
-<div>[4, ---4---
---0333--
--22222-
-1111111
--22222-
---333--
----4---
-]</div>
-<ul>
-<li>
-<pre>Condition not satisfied:<br/><br/>ob.diamond(a) == c<br/>|  |       |  |  |<br/>|  |       4  |  ---4---<br/>|  |          |  --0333--<br/>|  |          |  -22222-<br/>|  |          |  1111111<br/>|  |          |  -22222-<br/>|  |          |  --333--<br/>|  |          |  ---4---<br/>|  |          false<br/>|  |          1 difference (98% similarity)<br/>|  |          ---4---\n--(-)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n<br/>|  |          ---4---\n--(0)333--\n-22222-\n1111111\n-22222-\n--333--\n---4---\n<br/>|  ---4---<br/>|  --333--<br/>|  -22222-<br/>|  1111111<br/>|  -22222-<br/>|  --333--<br/>|  ---4---<br/>com.test.t.HW1Solution@8e482c2<br/></pre>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td colspan='10'>
-<div class='feature-description' id='-1525033401'>
-<span>numOfFactors</span>
-<span style='float: right; font-size: 60%;'>
-<a href='#toc'>Return</a>
-</span>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Given:</div>
-</td>
-<td>
-<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Expect:</div>
-</td>
-<td>
-<pre class='block-source'>ob.numOfFactors(a,b,c) == d</pre>
-</td>
-</tr>
-<tr>
-<td>
-<div class='block-kind'>Examples:</div>
-</td>
-<td>
-<div class='spec-examples'>
-<table class='ex-table'>
-<thead>
-<th class='ex-header'>a</th>
-<th class='ex-header'>b</th>
-<th class='ex-header'>c</th>
-<th class='ex-header'>d</th>
-</thead>
-<tbody>
-<tr class='ex-pass'>
-<td class='ex-value'>10</td>
-<td class='ex-value'>20</td>
-<td class='ex-value'>20</td>
-<td class='ex-value'>0</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>13</td>
-<td class='ex-value'>27</td>
-<td class='ex-value'>7</td>
-<td class='ex-value'>0</td>
-<td class='ex-result'>OK</td>
-</tr>
-<tr class='ex-pass'>
-<td class='ex-value'>38</td>
-<td class='ex-value'>49</td>
-<td class='ex-value'>29</td>
-<td class='ex-value'>0</td>
 <td class='ex-result'>OK</td>
 </tr>
 </tbody>
@@ -828,6 +684,144 @@ div.footer {
 </tr>
 <tr>
 <td colspan='10'>
+<div class='feature-description' id='-1525033401'>
+<span>numOfFactors</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<pre class='block-source'>ob.numOfFactors(a,b,c) == d</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>a</th>
+<th class='ex-header'>b</th>
+<th class='ex-header'>c</th>
+<th class='ex-header'>d</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>10</td>
+<td class='ex-value'>20</td>
+<td class='ex-value'>20</td>
+<td class='ex-value'>0</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>31</td>
+<td class='ex-value'>23</td>
+<td class='ex-value'>47</td>
+<td class='ex-value'>1</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>40</td>
+<td class='ex-value'>45</td>
+<td class='ex-value'>9</td>
+<td class='ex-value'>0</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>3/3 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='1587354568'>
+<span>integrationOfSquare</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<pre class='block-source'>ob.integrationOfSquare(a,b,c) == d</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>a</th>
+<th class='ex-header'>b</th>
+<th class='ex-header'>c</th>
+<th class='ex-header'>d</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>20.0</td>
+<td class='ex-value'>35.0</td>
+<td class='ex-value'>10</td>
+<td class='ex-value'>12986.111111111117</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>60.0</td>
+<td class='ex-value'>35.0</td>
+<td class='ex-value'>10</td>
+<td class='ex-value'>-64441.87242798354</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>80.0</td>
+<td class='ex-value'>35.0</td>
+<td class='ex-value'>10</td>
+<td class='ex-value'>-175625.0</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>3/3 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
 <div class='feature-description' id='931362838'>
 <span>numberOfBitChanges</span>
 <span style='float: right; font-size: 60%;'>
@@ -877,6 +871,71 @@ div.footer {
 <tr class='ex-pass'>
 <td class='ex-value'>8</td>
 <td class='ex-value'>2</td>
+<td class='ex-result'>OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+<td>
+<div class='spec-status'>3/3 passed</div>
+</td>
+</tr>
+<tr>
+<td colspan='10'>
+<div class='feature-description' id='-1942381537'>
+<span>findAllArmstrongNumbers</span>
+<span style='float: right; font-size: 60%;'>
+<a href='#toc'>Return</a>
+</span>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Given:</div>
+</td>
+<td>
+<pre class='block-source'>com.test.t.HW1Solution ob = new com.test.t.HW1Solution()</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Expect:</div>
+</td>
+<td>
+<pre class='block-source'>ob.findAllArmstrongNumbers(a,b) == c</pre>
+</td>
+</tr>
+<tr>
+<td>
+<div class='block-kind'>Examples:</div>
+</td>
+<td>
+<div class='spec-examples'>
+<table class='ex-table'>
+<thead>
+<th class='ex-header'>a</th>
+<th class='ex-header'>b</th>
+<th class='ex-header'>c</th>
+</thead>
+<tbody>
+<tr class='ex-pass'>
+<td class='ex-value'>200</td>
+<td class='ex-value'>400</td>
+<td class='ex-value'>370,371</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>100</td>
+<td class='ex-value'>999</td>
+<td class='ex-value'>153,370,371,407</td>
+<td class='ex-result'>OK</td>
+</tr>
+<tr class='ex-pass'>
+<td class='ex-value'>80</td>
+<td class='ex-value'>35</td>
+<td class='ex-value'></td>
 <td class='ex-result'>OK</td>
 </tr>
 </tbody>

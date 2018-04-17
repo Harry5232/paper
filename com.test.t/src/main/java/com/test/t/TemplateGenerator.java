@@ -243,7 +243,7 @@ public class TemplateGenerator {
 						return primitives;
 					}
 
-					@Override
+					
 					public float[] dataFlo() {
 						// TODO Auto-generated method stub
 						List<Float> nlist = new ArrayList<Float>();
@@ -258,7 +258,6 @@ public class TemplateGenerator {
 						return primitives;
 					}
 
-					@Override
 					public double[] dataDou() {
 						// TODO Auto-generated method stub
 						List<Double> nlist = new ArrayList<Double>();
@@ -273,7 +272,7 @@ public class TemplateGenerator {
 						return primitives;
 					}
 
-					@Override
+					
 					public char[] dataChar() {
 						// TODO Auto-generated method stub
 						char[] s = { 'a', 'b', 'c', 'd' };
